@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom info Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+html, body{
+    height: 100%;
+}
+
+body{
+    background: rgb(255 129 213 / 42%);
+}
+.scrolling{
+    background: rgb(86, 96, 107);
+    position: fixed;
+    display: none;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+.scrolling h5{
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+.bottom-scroll{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn1{
+    width: 180px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid rgb(101, 114, 127);
+    background-color: rgb(101, 114, 127);
+    color: #fff;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+.btn1:hover{
+    transition: 0.5s;
+    background-color: rgb(122, 136, 150);
+}
+.btn2{
+    width: 180px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0px;
+    background-image: linear-gradient(to right, rgb(1, 122, 41), rgb(0, 172, 114));
+    color: #fff;
+    border-radius: 6px;
+}
+.btn2:hover{
+    transition: 0.8s;
+    background-image: linear-gradient(to right, rgb(0, 172, 114), rgb(1, 122, 41));
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .bottom-scroll{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+.btn1{
+    width: 120px;
+    height: 40px;
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+.btn2{
+    width: 120px;
+    height: 40px;
+    font-size: 10px;
+}
+.scrolling h5{
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+.tes{
+    display: block;
+}
+.but{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .bottom-scroll{
+        display: f;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+.btn1{
+    width: 120px;
+    height: 40px;
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+.btn2{
+    width: 120px;
+    height: 40px;
+    font-size: 10px;
+}
+.scrolling h5{
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+.tes{
+    display: block;
+    margin-right: 10px;
+}
+.but{
+    display: flex;
+    justify-content: space-evenly;
+}
+        }
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .bottom-scroll{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+.btn1{
+    width: 140px;
+    height: 50px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.btn2{
+    width: 140px;
+    height: 50px;
+    font-size: 12px;
+}
+.scrolling h5{
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+.tes{
+    display: block;
+}
+.but{
+    display: flex;
+    justify-content: space-evenly;
+}
+        }
+
+      </style>
+</head>
+<body>
+
+    <!-- <div class="h-100 d-flex justify-content-center align-items-center">
+       <div>
+        <div><h1>Hello World!</h1></div>
+        <div><h1>Hello World!</h1></div>
+       </div>
+    </div> -->
+    <section class="test h-100">
+        <div class="container h-100">
+            <div class="row h-100 d-flex justify-content-center align-items-lg-center align-items-center align-md-items-center bg-success">
+                <div class="col-12 p-0 text-center">
+                   <div class="sss">
+                        <h1>Hello World!</h1>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="test h-100">
+        <div class="container h-100">
+            <div class="row h-100 d-flex justify-content-center align-items-lg-center align-items-center align-md-items-center bg-success">
+                <div class="col-12 p-0 text-center">
+                    <div class="sss">
+                         <p>Lorem ipsum</p>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="test h-100">
+        <div class="container h-100">
+            <div class="row h-100 d-flex justify-content-center align-items-lg-center align-items-center align-md-items-center bg-success">
+                <div class="col-12 p-0 text-center">
+                    <div class="sss">
+                         <p>Test</p>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="scrolling">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 my-3">
+                    <div class="bottom-scroll">
+                      <div class="tes">
+                        <h5>Need to hire something? Get an online quote or call 0800 410 1515</h5>
+                      </div>
+                      <div class="but">
+                        <button class="btn1">Allready had a quote?</button>
+                        <button class="btn2">Get Quotes Now</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+
+    // Back to top button
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.scrolling').fadeIn('slow');
+    } else {
+      $('.scrolling').fadeOut('slow');
+    }
+  });
+  $('.scrolling').click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1500, 'easeInOutExpo');
+    return false;
+  });
+    </script>
+</body>
+</html>

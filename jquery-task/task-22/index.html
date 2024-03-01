@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs(26/07/21)</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="icon" href="https://mobo.co.uk/news/wp-content/uploads/2018/05/cropped-favicon-1-1-32x32.jpg" sizes="32x32"/>
+
+<style>
+    /* body{
+        background: #ddd;
+    }
+    .tabs{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 400px;
+        background: #f5f5f5;
+        padding: 20px 30px;
+        overflow: hidden;
+        border-radius: 30px;
+        box-shadow: 5px 10px 5px #ccc;
+    }
+    .tabs .tab-header{
+        justify-content: space-around;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+    }
+    .tabs .tab-header div.active{
+        color: rgb(0, 172, 238);
+    }
+    .tabs .tab-cont{
+        position: relative;
+        background: rgb(0, 172, 238);
+        left: 0px;
+        border-radius: 5px;
+        transition: all 500ms ease-in-out;
+    }
+    .tabs .tab-body{
+        position: relative;
+        padding: 10px 5px;
+    }
+    .tabs .tab-body img{
+        height: 238px;
+        margin: 30px 10px;
+        border: 3px solid rgb(255 255 255);
+        border-radius: 20px;
+        box-shadow: 1px 2px 20px -2px rgb(0, 172, 238);
+-webkit-box-shadow: 1px 2px 20px -2px rgb(0, 172, 238);
+-moz-box-shadow: 1px 2px 20px -2px rgb(0, 172, 238);
+    }
+    .tabs .tab-body > div{
+        position: absolute;
+        top: -200%;
+        opacity: 0;
+        margin-top: 5px;
+        transform: scale(0.9);
+        transition: opacity 500ms ease-in-out 0ms, 
+        transform 500ms ease-in-out 0ms;
+    }
+    .tabs .tab-body > div.active{
+        display: flex;
+        top: 0px;
+        opacity: 1;
+        transform: scale(1);
+        margin-top: 0px;
+    } */
+    body{
+        background: #ddd;
+    }
+    .card-body{
+        position: absolute;
+        top: 125px;
+        left: 10%;
+        /* transform: translate(-50%, -50%); */
+        width: 80%;
+        height: 400px;
+        background: #f5f5f5;
+        padding: 20px 30px;
+        overflow: hidden;
+        border-radius: 30px;
+        box-shadow: 5px 10px 5px #ccc;
+    }
+    .filter_box {
+  		padding-right: 5px;
+  		padding-left: 5px;
+  		margin-bottom: 10px;
+  	}
+      .card-body .single-district{
+          display: flex;
+      }
+    .card-body .single-district img{
+        width: 362px;
+        height: 238px;
+        margin: 30px 17px;
+        border: 3px solid rgb(255 255 255);
+        border-radius: 20px;
+        box-shadow: 1px 2px 20px -2px rgb(0, 172, 238);
+-webkit-box-shadow: 1px 2px 20px -2px rgb(0, 172, 238);
+-moz-box-shadow: 1px 2px 20px -2px rgb(0, 172, 238);
+    }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .btn-outline-info {
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+    .card-body {
+        position: absolute;
+        top: 125px;
+        left: 3%;
+        width: 94%;
+        height: 925px;
+        padding: 20px 5px;
+    }
+    .card-body .single-district{
+          display: block;
+      }
+    .card-body .single-district img{
+        width: 276px;
+        margin: 20px 17px;
+    }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+    .card-body {
+        position: absolute;
+        top: 125px;
+        left: 3%;
+        width: 94%;
+        height: 1125px;
+        padding: 20px 5px;
+    }
+    .card-body .single-district{
+          display: block;
+      }
+    .card-body .single-district img{
+        width: 600px;
+        height: 300px;
+        margin: 20px 65px;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="container-fulid">
+    	<div class="card">
+		  	<div class="card-header text-center" style="font-size: 30px;">
+		    	<b>Tabs UI Design</b>
+		  	</div>
+
+		  	<div class="card-body">
+		    	<div class="row">
+		    		<div class="col-md-12 text-center">
+			            <button class="btn btn-outline-info filter-button" data-filter="flrs" id="DefaultOpen">FLOWERS</button>
+			            <button class="btn btn-outline-info filter-button" data-filter="veg">VEGLABLES</button>
+			            <button class="btn btn-outline-info filter-button" data-filter="frts">FROOTS</button>
+	        		</div>
+		    	</div>
+
+		    	<div class="row mt-4">
+	    			<div class="col-md-4 filter_box filter flrs">
+		                <div class="single-district">
+                            <img src="./images/flowers-3.jpg.crdownload" alt=""> 
+                            <img src="./images/flowers-1.jpg" alt="">
+                            <img src="./images/flowers-2.jpg" alt="">
+                        </div>
+		            </div>
+                </div>
+		    	<div class="row">
+                    <div class="col-md-4 filter_box filter veg">
+		                <div class="single-district">
+                            <img src="./images/vegtables-1.jpg" alt=""> 
+                            <img src="./images/vegtables-2.jpg" alt="">
+                            <img src="./images/vegtables-3.jpeg" alt="">
+                        </div>
+		            </div>
+		        </div>
+		    	<div class="row">
+                    <div class="col-md-4 filter_box filter frts">
+		                <div class="single-district">
+                            <img src="./images/froots-2.jpg" alt="">
+                            <img src="./images/froots-3.jpg" alt="">
+                            <img src="./images/froots-1.jpg" alt=""> 
+                        </div>
+		            </div>
+
+                </div>
+
+            </div>
+        </div>
+  </div>
+    <!-- <section>
+        <div class="container">
+            <div class="row">
+                <div class="tabs">
+                    <div class="col-12">
+                        <div class="tab-header">
+                            <div class="active">
+                                <h4>Flowers</h4>
+                            </div>
+                            <div>
+                                <h4>Vegtables</h4>
+                            </div>
+                            <div>
+                                <h4>Froots</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-cont"></div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                       
+                        <div class="tab-body">
+                            <div class="active">
+                                <img src="./images/flowers-3.jpg.crdownload" alt=""> 
+                                <img src="./images/flowers-1.jpg" alt="">
+                                <img src="./images/flowers-2.jpg" alt="">
+                            </div>
+                            <div>
+                                <img src="./images/vegtables-1.jpg" alt=""> 
+                                <img src="./images/vegtables-2.jpg" alt="">
+                                <img src="./images/vegtables-3.jpeg" alt="">
+                            </div>
+                            <div>
+                                <img src="./images/froots-1.jpg" alt="">
+                                <img src="./images/froots-2.jpg" alt=""> 
+                                <img src="./images/froots-3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section> -->
+   
+    
+
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script>
+    $(document).ready(function(){
+		    $(".filter-button").click(function(){
+		        var value = $(this).attr('data-filter');
+		        
+		        if(value == "all")
+		        {
+		            $('.filter').removeClass('hidden');
+		            $('.filter').show('1000');
+		        }
+		        else
+		        {
+		           $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+		           $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+		            $(".filter").not('.'+value).hide('3000');
+		            $('.filter').filter('.'+value).show('3000');
+		            
+		        }
+		    });
+		    
+		    if ($(".filter-button").removeClass("active")) {
+				$(this).removeClass("active");
+			}
+			$(this).addClass("active");
+
+		});
+
+        $("defaultOpen").click();
+ </script>
+</body>
+</html>
+
+

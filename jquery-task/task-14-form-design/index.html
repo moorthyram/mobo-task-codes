@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-nd-form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: #fff;
+        background-color: #000;
+        transition: 0.5s;
+        width: 100%;
+        height: 100%;
+    }
+    body::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, blue, rgb(0, 183, 255));
+    }
+
+    #contact p{
+        color: red;
+    }
+    #error{
+        color: #fff;
+        background: red;
+        text-align: center;
+    }
+
+    #contact{
+        position: relative;
+        z-index: 10;
+        padding: 20px 40px;
+    }
+    #contact{
+        width: 100%;
+        /* height: 80vh; */
+        background: #fff;
+        color: #000;
+        border-radius: 15px;
+        line-height: 30px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    #contact label{
+        color: #000;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    #contact span {
+        color: red;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+
+    #contact input{
+        /* width: 100%; */
+        height: 45px;
+        border: 1px solid #f3f3f3;
+        background-color: #f3f3f3;
+        border-radius: 25px;
+        font-size: 15px;
+    }
+    #contact textarea{
+        width: 100%;
+        height: 80px;
+        border: 1px solid #f3f3f3;
+        background-color: #f3f3f3;
+        border-radius: 25px;
+    }
+
+    #clk{
+        width: 100px;
+        height: 38px;
+        border: 1px solid #ff0058;
+        background-color: #ff0058;
+        color: #fff;
+        border-radius: 25px;
+        text-align: center;
+    }
+
+    </style>
+</head>
+<body>
+
+    <section id="cont">
+        <div class="container">
+           <div id="contact" class="p-lg-5 p-4">
+            <div class="name-logo d-flex justify-content-between">
+                <div class="title">
+                  <h2>Get in Touch</h2>
+                </div>
+                <div class="logo">
+                    <img src="./images/mobo-logo.png" alt="" width="60px">
+                </div>
+            </div>
+           <div class="para">
+            <h4 style="font-size: 16px; color: rgb(168, 168, 168);">Leave your message and we'll get back to you shortly</h4>
+           </div>
+            <div class="row">
+                <div class="form-group col-lg-6 col-md-12" >
+                    <label>Your name</label> 
+                    <input type="text" class="form-control" id="uname" name="your name" placeholder="Please Enter Your First Name">
+                    <p id="p1"></p>
+                </div>
+                <div class="form-group col-lg-6 col-md-12">
+                    <label>Email address</label>
+                    <input type="email" class="form-control" id="email" name="Email" placeholder="Please Enter Your Email Address">
+                    <p id="p2"></p>                  
+                </div>
+                <div class="form-group col-lg-6 col-md-12">
+                    <label>Phone</label>
+                    <input type="number" class="form-control" id="phn" name="Phone number" placeholder="Please Enter Your Phone Number">
+                    <p id="p3"></p>                     
+                </div>
+                <div class="form-group col-lg-6 col-md-12">
+                    <label class="form-label">Website URL</label> 
+                    <input type="text" class="form-control" id="url" name="URL">
+                    <p id="p4"></p>
+                </div>
+                <div class="form-group col-12">
+                    <label class="form-label">Message</label> 
+                    <textarea class="form-control" id="msg" name="message" placeholder="Tell as briefly about your needs"></textarea>
+                    <p id="p5"></p>
+                </div>
+                <div class="col-12">
+                <button type="submit" id="clk" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+           </div>
+        </div>
+    </section>
+   
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+    <script>
+
+$(document).ready(function(){
+
+    er_name = false;
+    er_email = false;
+    er_phn = false;
+    er_url = false;
+    er_msg = false;
+
+        $("#uname").keyup(function(){
+            set_name()
+        })
+        $("#email").keyup(function(){
+            set_email()
+        })
+        $("#phn").keyup(function(){
+            set_phn()
+        })
+        $("#url").keyup(function(){
+            set_url()
+        })
+        $("#msg").keyup(function(){
+            set_msg()
+        })
+
+            set_name = () => {
+                var regexn = /^[a-zA-Z]+$/; 
+                if(regexn.test($('#uname').val())){
+                    $('#uname').closest('.form-group').removeClass('has-error');
+                    $('#uname').closest('.form-group').addClass('has-success');
+                    $("#p1").text('')
+                    $("#uname").css({"border": "2px solid green"})
+                }else {
+                   $('#uname').closest('.form-group').addClass('has-error');
+                   $("#p1").text('Please enter the name').css({"color": "red"})
+                   $("#uname").css({"border": "2px solid red"})
+                   er_name = true;
+                }
+            }
+
+            set_email = () => {
+                var regexe = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; 
+                if(regexe.test($('#email').val())){
+                    $('#email').closest('.form-group').removeClass('has-error');
+                    $('#email').closest('.form-group').addClass('has-success');
+                    $("#p2").text('')
+                    $("#email").css({"border": "2px solid green"})
+                }else {
+                    $('#email').closest('.form-group').addClass('has-error');
+                    $("#p2").text('Please enter the valid email').css({"color": "red"})
+                    $("#email").css({"border": "2px solid red"})
+                    er_email = true;
+                }
+            }
+
+            set_phn = () => {
+                var regexp = /^\d{10}$/;
+                if(regexp.test($('#phn').val())){
+                    $('#phn').closest('.form-group').removeClass('has-error');
+                    $('#phn').closest('.form-group').addClass('has-success');
+                    $("#p3").text('')
+                    $("#phn").css({"border": "2px solid green"})
+                }else {
+                    $('#phn').closest('.form-group').addClass('has-error');
+                    $("#p3").text('Please enter the number').css({"color": "red"})
+                    $("#phn").css({"border": "2px solid red"})
+                    return true;
+                }
+            }
+
+            set_url = () => {
+                var regexu = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi; 
+                if(regexu.test($('#url').val())){
+                    $('#url').closest('.form-group').removeClass('has-error');
+                    $('#url').closest('.form-group').addClass('has-success');
+                    $("#p4").text('')
+                    $("#url").css({"border": "2px solid green"})
+                }else {
+                    $('#url').closest('.form-group').addClass('has-error');
+                    $("#p4").text('Please enter the valid url').css({"color": "red"})
+                    $("#url").css({"border": "2px solid red"})
+                    return true;
+                }
+            }
+
+            set_msg = () => {
+                var regexm = /^[a-zA-Z]+$/; 
+                if(regexm.test($('#msg').val())){
+                    $('#msg').closest('.form-group').removeClass('has-error');
+                    $('#msg').closest('.form-group').addClass('has-success');
+                    $("#p5").text('')
+                    $("#msg").css({"border": "2px solid green"})
+                }else {
+                    $('#msg').closest('.form-group').addClass('has-error');
+                    $("#p5").text('Please enter the message').css({"color": "red"})
+                    $("#msg").css({"border": "2px solid red"})
+                    return true;
+                }
+            }
+        })
+
+        $("#clk").click(function(){
+
+           
+            er_name = false;
+            er_email = false;
+            er_phn = false;
+            er_url = false;
+            er_msg = false;
+
+            set_name();
+            set_email();
+            set_phn();
+            set_url();
+            set_msg();
+
+
+            if(er_name == false && er_email == false && er_phn == false && er_url == false && er_msg == false){
+                alert('form submitted')
+                return false;
+            }else{
+                alert('please fill the form')
+                return true;
+            }
+        })
+
+
+    </script>
+</body>
+</html>

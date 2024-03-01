@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination(18/08/21)</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="icon" href="https://mobo.co.uk/news/wp-content/uploads/2018/05/cropped-favicon-1-1-32x32.jpg" sizes="32x32"/>
+    <link rel="stylesheet" href="./css/icofont.css">
+    <style>
+        body{
+            background-color: rgb(24,119,242);
+        }
+        .col-12{
+            height: 100vh;
+        }
+        .pagination{
+            background-color: rgb(255, 255, 255);
+            padding: 25px 50px;
+            border-radius: 50px;
+            box-shadow: 1px 2px 20px -2px rgb(92, 92, 92);
+-webkit-box-shadow: 1px 2px 20px -2px rgb(92, 92, 92);
+-moz-box-shadow: 1px 2px 20px -2px rgb(92, 92, 92);
+        }
+        .pagination li{
+            padding: 5px;
+            border-radius: 50px;
+            border: 0px;
+        }
+        .pagination li a{
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+            border: 0px;
+        }
+        /* .pagination li a:hover{
+           background-color: rgb(24,119,242);
+           color: rgb(255, 255, 255);
+        } */
+        .page-link:active {
+            background-color: rgb(24,119,242);
+           color: rgb(255, 255, 255);
+        }
+        .active:active {
+            background-color: rgb(24,119,242);
+            color: rgb(255, 255, 255);
+        }
+        .focus:focus {
+            background-color: rgb(24,119,242);
+            color: rgb(255, 255, 255);
+        }
+        :target {
+            background-color: rgb(24,119,242);
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12  d-flex justify-content-center align-items-center">
+                <!-- <ul class="pagination">
+                    <li><a  class="page-link" href="#"><i class="icofont-rounded-left"></i>Prev</a></li>
+                    <li><a  class="page-link" href="#">1</a></li>
+                    <li><a  class="page-link" href="#">2</a></li>
+                    <li><a  class="page-link" href="#">3</a></li>
+                    <li><a  class="page-link" href="#">4</a></li>
+                    <li><a  class="page-link" href="#">5</a></li>
+                    <li><a  class="page-link" href="#">6</a></li>
+                    <li><a  class="page-link" href="#">7</a></li>
+                    <li><a  class="page-link" href="#">8</a></li>
+                    <li><a  class="page-link" href="#">9</a></li>
+                    <li><a  class="page-link" href="#">10</a></li>
+                    <li><a  class="page-link" href="#">Next<i class="icofont-rounded-right"></i></a></li>
+                </ul>                   -->
+                <ul class="pagination btn-group-toggle" data-toggle="buttons">
+                    <li><a  class="btn" href="#"><i class="icofont-rounded-left"></i>Prev</a></li>
+                    <li><a  class="btn" href="#">1</a></li>
+                    <li><a  class="btn active" href="#">2</a></li>
+                    <li><a  class="btn" href="#">3</a></li>
+                    <li><a  class="btn" href="#">4</a></li>
+                    <li><a  class="btn" href="#">5</a></li>
+                    <li><a  class="btn" href="#">6</a></li>
+                    <li><a  class="btn" href="#">7</a></li>
+                    <li><a  class="btn" href="#">8</a></li>
+                    <li><a  class="btn" href="#">9</a></li>
+                    <li><a  class="btn" href="#">10</a></li>
+                    <li><a  class="btn" href="#">Next<i class="icofont-rounded-right"></i></a></li>
+                </ul>                  
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: #fff;
+        background-color: #000;
+        transition: 0.5s;
+        width: 100%;
+        height: 100%;
+    }
+    body::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg,#ff0058,#ffbc00);
+    }
+
+    #contact p{
+        color: red;
+        line-height: 10px;
+    }
+    #error{
+        color: #fff;
+        background: red;
+        text-align: center;
+    }
+
+    #contact{
+        position: relative;
+        z-index: 10;
+        padding: 20px 40px;
+    }
+    #contact{
+        width: 90%;
+        background: #fff;
+        color: #000;
+        border-radius: 15px;
+        line-height: 30px;
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }
+
+    #contact label{
+        color: #000;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    
+    #contact span {
+        color: red;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+
+    #contact input{
+        /* width: 100%; */
+        height: 45px;
+        border: 1px solid #f3f3f3;
+        background-color: #f3f3f3;
+        border-radius: 25px;
+        font-size: 15px;
+        /* margin-bottom: 30px; */
+    }
+    #contact textarea{
+        width: 100%;
+        height: 80px;
+        border: 1px solid #f3f3f3;
+        background-color: #f3f3f3;
+        border-radius: 25px;
+        /* margin-bottom: 30px; */
+    }
+
+    #clk{
+        width: 100px;
+        height: 38px;
+        border: 1px solid #ff0058;
+        background-color: #ff0058;
+        color: #fff;
+        border-radius: 25px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- <section id="cont">
+        <div class="container">
+           <div id="contact">
+            <div class="name-logo d-flex justify-content-between">
+                <div class="title">
+                  <h2>Get in Touch</h2>
+                </div>
+                <div class="logo">
+                    <img src="./images/mobo-logo.png" alt="" width="60px">
+                </div>
+            </div>
+            <h4 style="font-size: 16px; color: rgb(168, 168, 168);">Leave your message and we'll get back to you shortly</h4>
+            <form id="form-reg" onsubmit="return formValidation()">
+            <div class="row">
+                <div class="form-group col-md-12 col-lg-6">
+                    <label>Your name</label> 
+                    <input type="text" class="form-control" id="uname" name="your name" placeholder="Please Enter Your First Name">
+                    <p id="p1"></p>
+                </div>
+                <div class="form-group col-md-12 col-lg-6">
+                    <label>Email address</label>
+                    <input type="email" class="form-control" id="email" name="Email" placeholder="Please Enter Your Email Address">
+                    <p id="p2"></p>                  
+                </div>
+                <div class="form-group col-md-12 col-lg-6">
+                    <label>Phone</label>
+                    <input type="text" class="form-control" id="phn" name="Phone number" placeholder="Please Enter Your Phone Number">
+                    <p id="p3"></p>                     
+                </div>
+                <div class="form-group col-md-12 col-lg-6">
+                    <label class="form-label">Website URL</label> 
+                    <input type="text" class="form-control" id="url" name="URL">
+                    <p id="p4"></p>
+                </div>
+                <div class="form-group col-12">
+                    <label class="form-label">Message</label> 
+                    <textarea class="form-control" id="msg" name="message" placeholder="Tell as briefly about your needs"></textarea>
+                    <p id="p5"></p>
+                </div>
+                <div class="col-12">
+                <button type="submit" id="clk" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+            </form>
+           </div>
+        </div>
+    </section> -->
+
+
+    <section id="contact" class="p-5">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="contact-box">
+                <div class="col-12 d-flex justify-content-between">
+                    <div class="con-title">
+                      <h2>Get in Touch</h2>
+                      <h4 style="font-size: 16px; color: rgb(177, 177, 177);">Leave your message and we'll get back to you shortly</h4>
+                    </div>
+                    <div class="logo" style="align-items: flex-end;">
+                        <img src="./images/mobo-logo.png" alt="" width="60px">
+                    </div>
+                </div>
+                  <div id="error"></div>
+                  <form id="form-reg" onsubmit="return formValidation()">
+                  <div class="row">
+                   
+                    <div class="col-sm-12 col-lg-6">
+                      <label>Your name</label> <span class="red"><small></small></span>
+                      <input type="text" class="form-control required" id="uname" name="your name" placeholder="Please Enter Your First Name">
+                      <p id="p1"></p>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                      <label>Email address</label> <span class="red"><small></small></span>
+                      <input type="email" class="form-control required" id="email" name="Email" placeholder="Please Enter Your Email Address">
+                      <p id="p2"></p>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                      <label>Phone</label> <span class="red"><small></small></span>
+                      <input type="text" class="form-control required" id="phn" name="Phone number" placeholder="Please Enter Your Phone Number">
+                      <p id="p3"></p>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                      <label class="form-label">Website URL</label> <span class="red"><small></small></span>
+                      <input type="text" class="form-control required" id="url" name="URL">
+                      <p id="p4"></p>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Message</label> <span class="red"><small></small></span>
+                        <textarea class="form-control required" id="msg" name="message" placeholder="Tell as briefly about your needs"></textarea>
+                      <p id="p5"></p>
+                      </div>
+                      <div class="col-12">
+                      <button type="submit" id="clk" class="btn btn-primary">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+    <script>
+
+function formValidation(){
+            var uname = $('#uname').val();
+            var email = $('#email').val();
+            var phn = $('#phn').val();
+            var url = $('#url').val();
+            var msg = $('#msg').val();
+
+            $("#p1").hide();
+            $("#p2").hide();
+            $("#p3").hide();
+            $("#p4").hide();
+            $("#p5").hide();
+
+
+            if(uname == ""){
+                $("#p1").show();
+                $("#p1").text("please enter name");
+                return false;
+            }else{
+                var pattern_uname = /^[a-zA-Z ]+$/ ;
+                if(!pattern_uname.test(uname)){
+                $("#p1").show();
+                $("#p1").text("please enter a valid name");
+                return false;
+                }
+            }
+
+            if(email == ""){
+                $("#p2").show();
+                $("#p2").text("please enter email");
+                return false;
+            }else{
+                var pattern_email = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                if(!pattern_email.test(email)){
+                $("#p2").show();
+                $("#p2").text("please enter a valid email");
+                return false;
+                }
+            }
+
+            if(phn == ""){
+                $("#p3").show();
+                $("#p3").text("please enter number");
+                return false;
+            }else{
+                var pattern_phn = /^\d{10}$/; 
+                if(!pattern_phn.test(phn)){
+                $("#p3").show();
+                $("#p3").text("please enter a valid phone number");
+                return false;
+                }
+            }
+
+            if(url == ""){
+                $("#p4").show();
+                $("#p4").text("please enter url");
+                return false;
+            }else{
+                var pattern_url = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi; 
+                if(!pattern_url.test(url)){
+                $("#p4").show();
+                $("#p4").text("please enter a valid url");
+                return false;
+                }
+            }
+
+            if(msg == ""){
+                $("#p5").show();
+                $("#p5").text("please enter message");
+                return false;
+            }else{
+                var pattern_msg = /^[a-zA-Z ]+$/; 
+                if(!pattern_msg.test(msg)){
+                $("#p5").show();
+                $("#p5").text("please enter a valid message");
+                return false;
+                }
+            }
+            alert('form submitted')
+            return true
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // $(document).ready(function(){
+        //     $("#uname").keyup(function(){
+        //         var regexn = /^[a-zA-Z]+$/; 
+        //         if(regexn.test($('#uname').val())){
+        //             $('#uname').closest('.form-group').removeClass('has-error');
+        //             $('#uname').closest('.form-group').addClass('has-success');
+        //             // $("#p1").text('ok!!').css({"color": "green"})
+        //             $("#uname").css({"border": "2px solid green"})
+        //         }else {
+        //            $('#uname').closest('.form-group').addClass('has-error');
+        //            $("#p1").text('Please enter the name').css({"color": "red"})
+        //            $("#uname").css({"border": "2px solid red"})
+        //         }
+        //     })
+
+        //     $("#email").keyup(function(){
+        //         var regexe = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; 
+        //         if(regexe.test($('#email').val())){
+        //             $('#email').closest('.form-group').removeClass('has-error');
+        //             $('#email').closest('.form-group').addClass('has-success');
+        //             // $("#p2").text('ok!!').css({"color": "green"})
+        //             $("#email").css({"border": "2px solid green"})
+        //         }else {
+        //             $('#email').closest('.form-group').addClass('has-error');
+        //             $("#p2").text('Please enter the valid email').css({"color": "red"})
+        //             $("#email").css({"border": "2px solid red"})
+        //         }
+        //     })
+
+        //     $("#phn").keyup(function(){
+        //         var regexp = /^\d{10}$/;
+        //         if(regexp.test($('#phn').val())){
+        //             $('#phn').closest('.form-group').removeClass('has-error');
+        //             $('#phn').closest('.form-group').addClass('has-success');
+        //             // $("#p3").text('ok!!').css({"color": "green"})
+        //             $("#phn").css({"border": "2px solid green"})
+        //         }else {
+        //             $('#phn').closest('.form-group').addClass('has-error');
+        //             $("#p3").text('Please enter the number').css({"color": "red"})
+        //             $("#phn").css({"border": "2px solid red"})
+        //         }
+        //     })
+
+        //     $("#url").keyup(function(){
+        //         var regexu = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi; 
+        //         if(regexu.test($('#url').val())){
+        //             $('#url').closest('.form-group').removeClass('has-error');
+        //             $('#url').closest('.form-group').addClass('has-success');
+        //             // $("#p4").text('ok!!').css({"color": "green"})
+        //             $("#url").css({"border": "2px solid green"})
+        //         }else {
+        //             $('#url').closest('.form-group').addClass('has-error');
+        //             $("#p4").text('Please enter the name').css({"color": "red"})
+        //             $("#url").css({"border": "2px solid red"})
+        //         }
+        //     })
+
+        //     $("#msg").keyup(function(){
+        //         var regexm = /^[a-zA-Z]+$/; 
+        //         if(regexm.test($('#msg').val())){
+        //             $('#msg').closest('.form-group').removeClass('has-error');
+        //             $('#msg').closest('.form-group').addClass('has-success');
+        //             // $("#p5").text('ok!!').css({"color": "green"})
+        //             $("#msg").css({"border": "2px solid green"})
+        //         }else {
+        //             $('#msg').closest('.form-group').addClass('has-error');
+        //             $("#p5").text('Please enter the name').css({"color": "red"})
+        //             $("#msg").css({"border": "2px solid red"})
+        //         }
+        //     })
+        // })
+
+
+    // $(document).ready(function(){
+    //     $("form").submit(function(){
+    //         $flag = true;
+    //         $(this).find(".required").each(function(){
+    //             if($(this).val()==""){
+    //                 $flag = false;
+    //                 $(this).addClass("blank").siblings(".red").children("small").text($(this).attr("name")+" field is required");
+
+    //             }else{
+    //                 $(this).removeClass("blank").siblings(".red").children("small").text("");
+    //             }
+    //         });
+    //         return $flag;
+    //     })
+    // })
+
+
+
+       
+
+
+
+
+
+
+
+
+
+    //    $(document).ready(function(){
+    //        $("#clk").click(function(){
+    //         $('#uname').keyup(function(){
+    //         var username = $("#uname").val();
+
+    //         var usernamepattern = /^[a-zA-Z]+$/;
+
+    //         if(usernamepattern.test(username)){
+    //             $("#uname").css({"border":"2px solid red"});
+    //             $("#p1").text('please enter the Name')
+    //             $("#uname").focus();
+    //             return false;
+                
+
+    //         }else{
+    //             // $("#uname").css({"border":"2px solid red"});
+    //             $("#p1").text('')
+    //             return true;
+    //         }
+    //         })
+    //         $('#email').keyup(function(){
+    //         var emailaddr = $("#email").val();
+
+    //         var email_regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    //         if(email_regex.test(emailaddr)){
+    //             $("#email").css({"border":"2px solid red"});
+    //             $("#p2").text('please enter the email')
+    //             $("#email").focus();
+    //             return false;
+    //         }else{
+    //             // $("#email").css({"border":"2px solid red"});
+    //             $("#p2").text('')
+    //             return true;
+    //         }
+    //         })
+    //         $('#phn').keyup(function(){
+    //         var phn = $("#phn").val();
+
+    //         var number_regex =  /^\d*(?:\.\d{1,2})?$/;
+
+    //         if(number_regex.test(phn)){
+    //             $("#phn").css({"border":"2px solid red"});
+    //             $("#p3").text('please enter the phone number')
+    //             $("#phn").focus();
+
+    //             return false;
+    //         }else{
+    //             // $("#phn").css({"border":"2px solid red"});
+    //             $("#p3").text('')
+    //             return true;
+    //         }
+    //         })
+    //         $('#phn').keyup(function(){
+    //         var phn = $("#phn").val();
+
+    //         var number_regex =  /^\d*(?:\.\d{1,2})?$/;
+
+    //         if(number_regex.test(phn)){
+    //             $("#phn").css({"border":"2px solid red"});
+    //             $("#p3").text('please enter the phone number')
+    //             $("#phn").focus();
+
+    //             return false;
+    //         }else{
+    //             // $("#phn").css({"border":"2px solid red"});
+    //             $("#p3").text('')
+    //             return true;
+    //         }
+    //         })
+    //        })
+    //    })
+
+    
+      // function formValidation(){
+        //     var uname = $('#uname').val();
+        //     var email = $('#email').val();
+        //     var phn = $('#phn').val();
+        //     var url = $('#url').val();
+        //     var msg = $('#msg').val();
+
+        //     $("#p1").hide();
+        //     $("#p2").hide();
+        //     $("#p3").hide();
+        //     $("#p4").hide();
+        //     $("#p5").hide();
+
+
+        //     if(uname == ""){
+        //         $("#p1").show();
+        //         $("#p1").text("please enter name");
+        //         return false;
+        //     }else{
+        //         var pattern_uname = /^[a-zA-Z ]+$/ ;
+        //         if(!pattern_uname.test(uname)){
+        //         $("#p1").show();
+        //         $("#p1").text("please enter a valid name");
+        //         return false;
+        //         }
+        //     }
+
+        //     if(email == ""){
+        //         $("#p2").show();
+        //         $("#p2").text("please enter email");
+        //         return false;
+        //     }else{
+        //         var pattern_email = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        //         if(!pattern_email.test(email)){
+        //         $("#p2").show();
+        //         $("#p2").text("please enter a valid email");
+        //         return false;
+        //         }
+        //     }
+
+        //     if(phn == ""){
+        //         $("#p3").show();
+        //         $("#p3").text("please enter number");
+        //         return false;
+        //     }else{
+        //         var pattern_phn = /^\d{10}$/; 
+        //         if(!pattern_phn.test(phn)){
+        //         $("#p3").show();
+        //         $("#p3").text("please enter a valid phone number");
+        //         return false;
+        //         }
+        //     }
+
+        //     if(url == ""){
+        //         $("#p4").show();
+        //         $("#p4").text("please enter url");
+        //         return false;
+        //     }else{
+        //         var pattern_url = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi; 
+        //         if(!pattern_url.test(url)){
+        //         $("#p4").show();
+        //         $("#p4").text("please enter a valid url");
+        //         return false;
+        //         }
+        //     }
+
+        //     if(msg == ""){
+        //         $("#p5").show();
+        //         $("#p5").text("please enter message");
+        //         return false;
+        //     }else{
+        //         var pattern_msg = /^[a-zA-Z ]+$/; 
+        //         if(!pattern_msg.test(msg)){
+        //         $("#p5").show();
+        //         $("#p5").text("please enter a valid message");
+        //         return false;
+        //         }
+        //     }
+        //     alert('form submitted')
+        //     return true
+        // }
+
+    </script>
+</body>
+</html>

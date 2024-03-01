@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel UI Design(26/07/21)</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="icon" href="https://mobo.co.uk/news/wp-content/uploads/2018/05/cropped-favicon-1-1-32x32.jpg" sizes="32x32"/>
+    <link rel="stylesheet" href="./css/icofont.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <div class="side-bar">
+                        <h1>MOBO</h1>
+                        <ul>
+                            <li>
+                                <a href="#"><i class="icofont-dashboard-web"></i><span>Dashboard</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icofont-users-alt-3"></i><span>My Clients</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icofont-newspaper"></i><span>Client Projects</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icofont-certificate-alt-1"></i><span>Invite Client</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icofont-ui-message"></i><span>Message</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icofont-settings-alt"></i><span>Settings</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-10">
+                   <div class="panel-side">
+                        <div class="row">
+                            <div class="col-12">
+                               <div class="top-head">
+                                <h2>My Clients</h2>
+                               </div>
+                            </div>
+                           <div class="inside-color">
+                            <div class="col-12">
+                                <div class="active-client">
+                                    <div class="row">  
+                                        <div class="col-12 col-lg-6">
+                                        <div class="act">
+                                            <div class="dropdown">
+                                                <a class="btn dropdown-toggle" style="font-size: 20px;" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <b>Active clients</b>
+                                                </a>
+                                              
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                  <a class="dropdown-item" href="#">Action</a>
+                                                  <a class="dropdown-item" href="#">Another action</a>
+                                                  <a class="dropdown-item" href="#">Something else here</a>
+                                                </div>
+                                              </div>
+                                            <p>14 Total</p>
+                                            <p>Sorted by:</p>
+                                            <div class="dropdown">
+                                                <a class="btn dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <b>Active</b>
+                                                </a>
+                                              
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                  <a class="dropdown-item" href="#">Action</a>
+                                                  <a class="dropdown-item" href="#">Another action</a>
+                                                  <a class="dropdown-item" href="#">Something else here</a>
+                                                </div>
+                                              </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                        <div class="srch">
+                                            <i class="icofont-search-1"></i>
+                                            <input type="text" placeholder="search clients">
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <div class="images">
+                                                <a href="#"><img src="./images/client-1.jpg" alt=""></a>
+                                                <span class="tick"><i class="icofont-tick-mark"></i></span>
+                                            </div>
+                                            <h4>Jesus Gibbs</h4>
+                                            <a href="#">moorthy@mobo.uk</a>
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="./images/client-3.jfif" alt="">
+                                                    <img src="./images/client-mo.jpg" alt="">
+                                                    <img src="./images/client-3.jfif" alt="">
+                                                    <img src="./images/client-mo.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="input-box">
+                                                <button><i class="icofont-user-alt-3"></i><p>Profile</p></button>
+                                                <button><i class="icofont-contact-add"></i><p>Contact</p></button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <div class="images">
+                                                <a href="#"><img src="./images/client-1.jpg" alt=""></a>
+                                                <span class="tick"><i class="icofont-tick-mark"></i></span>
+                                            </div>
+                                            <h4>Jesus Gibbs</h4>
+                                            <a href="#">moorthy@mobo.uk</a>
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="./images/client-3.jfif" alt="">
+                                                    <img src="./images/client-mo.jpg" alt="">
+                                                    <img src="./images/client-3.jfif" alt="">
+                                                    <img src="./images/client-mo.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="input-box">
+                                                <button><i class="icofont-user-alt-3"></i><p>Profile</p></button>
+                                                <button><i class="icofont-contact-add"></i><p>Contact</p></button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <div class="images">
+                                                <a href="#"><img src="./images/client-1.jpg" alt=""></a>
+                                                <span class="tick"><i class="icofont-tick-mark"></i></span>
+                                            </div>
+                                            <h4>Jesus Gibbs</h4>
+                                            <a href="#">moorthy@mobo.uk</a>
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="./images/client-3.jfif" alt="">
+                                                    <img src="./images/client-mo.jpg" alt="">
+                                                    <img src="./images/client-3.jfif" alt="">
+                                                    <img src="./images/client-mo.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="input-box">
+                                                <button><i class="icofont-user-alt-3"></i><p>Profile</p></button>
+                                                <button><i class="icofont-contact-add"></i><p>Contact</p></button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <div class="images">
+                                                <a href="#"><img src="./images/client-1.jpg" alt=""></a>
+                                                <span class="tick"><i class="icofont-tick-mark"></i></span>
+                                            </div>
+                                            <h4>Jesus Gibbs</h4>
+                                            <a href="#">moorthy@mobo.uk</a>
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="./images/client-3.jfif" alt="">
+                                                    <img src="./images/client-mo.jpg" alt="">
+                                                    <img src="./images/client-3.jfif" alt="">
+                                                    <img src="./images/client-mo.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="input-box">
+                                                <button><i class="icofont-user-alt-3"></i><p>Profile</p></button>
+                                                <button><i class="icofont-contact-add"></i><p>Contact</p></button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <div class="images">
+                                                <a href="#"><img src="./images/client-1.jpg" alt=""></a>
+                                                <span class="tick"><i class="icofont-tick-mark"></i></span>
+                                            </div>
+                                            <h4>Jesus Gibbs</h4>
+                                            <a href="#">moorthy@mobo.uk</a>
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="./images/client-3.jfif" alt="">
+                                                    <img src="./images/client-mo.jpg" alt="">
+                                                    <img src="./images/client-3.jfif" alt="">
+                                                    <img src="./images/client-mo.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="input-box">
+                                                <button><i class="icofont-user-alt-3"></i><p>Profile</p></button>
+                                                <button><i class="icofont-contact-add"></i><p>Contact</p></button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <div class="images">
+                                                <a href="#"><img src="./images/client-1.jpg" alt=""></a>
+                                                <span class="tick"><i class="icofont-tick-mark"></i></span>
+                                            </div>
+                                            <h4>Jesus Gibbs</h4>
+                                            <a href="#">moorthy@mobo.uk</a>
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="./images/client-3.jfif" alt="">
+                                                    <img src="./images/client-mo.jpg" alt="">
+                                                    <img src="./images/client-3.jfif" alt="">
+                                                    <img src="./images/client-mo.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="input-box">
+                                                <button><i class="icofont-user-alt-3"></i><p>Profile</p></button>
+                                                <button><i class="icofont-contact-add"></i><p>Contact</p></button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                           </div>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <div class="side-bar">
+                        <!-- <h1>MOBO</h1> -->
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <a class="navbar-brand" href="#">MOBO</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                          
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                  <a class="nav-link" href="#"><i class="icofont-dashboard-web"></i><span>Dashboard</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link blink_me" style="color: var(--primary);" href="#"><i class="icofont-users-alt-3"></i><span>My Clients</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icofont-newspaper"></i><span>Client Projects</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icofont-certificate-alt-1"></i><span>Invite Client</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icofont-ui-message"></i><span>Message</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="icofont-settings-alt"></i><span>Settings</span></a>
+                                </li>
+                              </ul>
+                            </div>
+                          </nav>
+                    </div>
+                </div>
+                <div class="col-10">
+                   <div class="panel-side">
+                        <div class="row">
+                            <div class="col-12">
+                               <div class="top-head">
+                                <h2>My Clients</h2>
+                               </div>
+                            </div>
+                           <div class="inside-color">
+                            <div class="col-12">
+                                <div class="active-client">
+                                    <div class="row">  
+                                        <div class="col-12 col-lg-6">
+                                        <div class="act">
+                                            <div class="dropdown">
+                                                <a class="btn dropdown-toggle" style="font-size: 20px;" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <b>Active clients</b>
+                                                </a>
+                                              
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                  <a class="dropdown-item" href="#">Action</a>
+                                                  <a class="dropdown-item" href="#">Another action</a>
+                                                  <a class="dropdown-item" href="#">Something else here</a>
+                                                </div>
+                                              </div>
+                                            <p>14 Total</p>
+                                            <p>Sorted by:</p>
+                                            <div class="dropdown">
+                                                <a class="btn dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <b>Active</b>
+                                                </a>
+                                              
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                  <a class="dropdown-item" href="#">Action</a>
+                                                  <a class="dropdown-item" href="#">Another action</a>
+                                                  <a class="dropdown-item" href="#">Something else here</a>
+                                                </div>
+                                              </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                        <div class="srch">
+                                            <i class="icofont-search-1"></i>
+                                            <input type="text" placeholder="search clients">
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <div class="images">
+                                                <a href="#"><img src="./images/DSC_3942 copy.jpg" alt=""></a>
+                                                <span class="tick"><i class="icofont-tick-mark"></i></span>
+                                            </div>
+                                            <h4>Ram Moorthy</h4>
+                                            <a href="#">moorthy@mobo.uk</a>
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="./images/team-2.jpg" alt="">
+                                                    <img src="./images/team-3.jpg" alt="">
+                                                    <img src="./images/team-4.jpg" alt="">
+                                                    <img src="./images/team-5.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="input-box">
+                                                <button class="bu"><i class="icofont-user-alt-3"></i><p>Profile</p></button>
+                                                <button><i class="icofont-contact-add"></i><p>Contact</p></button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <div class="images">
+                                                <a href="#"><img src="./images/team-2.jpg" alt=""></a>
+                                                <span class="tick"><i class="icofont-tick-mark"></i></span>
+                                            </div>
+                                            <h4>Jesus Gibbs</h4>
+                                            <a href="#">moorthy@mobo.uk</a>
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="./images/team-3.jpg" alt="">
+                                                    <img src="./images/team-1.jpg" alt="">
+                                                    <img src="./images/team-8.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="input-box">
+                                                <button class="bu"><i class="icofont-user-alt-3"></i><p>Profile</p></button>
+                                                <button><i class="icofont-contact-add"></i><p>Contact</p></button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <div class="images">
+                                                <a href="#"><img src="./images/team-3.jpg" alt=""></a>
+                                                <span class="tick"><i class="icofont-tick-mark"></i></span>
+                                            </div>
+                                            <h4>Jesus Gibbs</h4>
+                                            <a href="#">moorthy@mobo.uk</a>
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="./images/team-10.jpg" alt="">
+                                                    <img src="./images/team-5.jpg" alt="">
+                                                    <img src="./images/team-9.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="input-box">
+                                                <button class="bu"><i class="icofont-user-alt-3"></i><p>Profile</p></button>
+                                                <button><i class="icofont-contact-add"></i><p>Contact</p></button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <div class="images">
+                                                <a href="#"><img src="./images/team-4.jpg" alt=""></a>
+                                                <span class="tick"><i class="icofont-tick-mark"></i></span>
+                                            </div>
+                                            <h4>Jesus Gibbs</h4>
+                                            <a href="#">moorthy@mobo.uk</a>
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="./images/DSC_3942 copy.jpg" alt="">
+                                                    <img src="./images/team-10.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="input-box">
+                                                <button class="bu"><i class="icofont-user-alt-3"></i><p>Profile</p></button>
+                                                <button><i class="icofont-contact-add"></i><p>Contact</p></button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <div class="images">
+                                                <a href="#"><img src="./images/team-10.jpg" alt=""></a>
+                                                <span class="tick"><i class="icofont-tick-mark"></i></span>
+                                            </div>
+                                            <h4>Jesus Gibbs</h4>
+                                            <a href="#">moorthy@mobo.uk</a>
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="./images/team-2.jpg" alt="">
+                                                    <img src="./images/DSC_3942 copy.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="input-box">
+                                                <button class="bu"><i class="icofont-user-alt-3"></i><p>Profile</p></button>
+                                                <button><i class="icofont-contact-add"></i><p>Contact</p></button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <div class="images">
+                                                <a href="#"><img src="./images/team-5.jpg" alt=""></a>
+                                                <span class="tick"><i class="icofont-tick-mark"></i></span>
+                                            </div>
+                                            <h4>Jesus Gibbs</h4>
+                                            <a href="#">moorthy@mobo.uk</a>
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="./images/team-10.jpg" alt="">
+                                                    <img src="./images/team-2.jpg" alt="">
+                                                    <img src="./images/team-3.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="input-box">
+                                                <button class="bu"><i class="icofont-user-alt-3"></i><p>Profile</p></button>
+                                                <button><i class="icofont-contact-add"></i><p>Contact</p></button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                           </div>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

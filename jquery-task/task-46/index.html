@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Blocks Section(20/09/21)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+html, body{
+    height: 100%;
+}
+body{
+    background: linear-gradient(30deg, rgba(255,255,255,1) 0%, rgba(3,10,180,1) 41%, rgba(6,87,173,1) 57%, rgba(255,255,255,1) 100%);
+}
+
+#services .card{
+    padding: 40px 20px;
+    position: relative;
+    height: 300px;
+    transition: all 0.3s ease-in-out;
+    transition: transform .2s;
+    border-radius: 0px;
+}
+
+#services .card:hover img{
+    transform: scale(1.1); 
+    transition: 0.5s;
+}
+
+#services .card h4{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+#services .card h2{
+    font-size: 22px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#services .card p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+#services .card .icon{
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+#services .card .card-body{
+    /* line-height: 1px; */
+    padding-top: 20px;
+}
+
+#services .card img{
+    width: 120px;
+    height: 120px;
+}
+#services .card .new1{
+    width: 300px;
+    border-top: 2px solid #ffffff5e;
+}
+#services .card .diss{
+    display: flex;
+
+}
+.dot {
+  height: 4px;
+  width: 8px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  margin: 15px 0px;
+}
+
+/* .dot:before,
+        .dot:after {
+            content: "";
+            flex: 1 1;
+            border-bottom: 2px solid #000;
+            margin: auto;
+            width: 300px;
+        } */
+
+
+      </style>
+</head>
+<body class="d-flex justify-content-center align-items-lg-center align-items-end h-100">
+
+    <section id="services" class="services h-100">
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-lg-center align-items-end h-100">
+            <div class="col-md-6 col-sm-6 col-lg-4 p-0">
+              <div class="card" style="background: rgb(255, 196, 0);">
+                <div class="icon"> <h2>Welcome to </br> the Portfolio of </br> Jonathan Patterson, </br> Detroit Product Designer</h2></div>
+                <div class="card-body">
+                  <h4>Home</h4>
+                  <div class="diss"><span class="dot"></span><hr class="new1"></div>
+                  <p>Permanent Design for product and website</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-4 p-0">
+              <div class="card" style="background: rgb(255, 94, 0);">
+                <div class="icon"><img src="./images/green.png" alt=""></div>
+                <div class="card-body">
+                  <h4>About</h4>
+                  <div class="diss"><span class="dot"></span><hr class="new1"></div>
+                  <p>Shattering the status quo</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-4 p-0">
+              <div class="card" style="background: #ff004a;">
+                <div class="icon"><img src="./images/glass.png" alt=""></div>
+                <div class="card-body">
+                  <h4>Portfolio</h4>
+                  <div class="diss"><span class="dot"></span><hr class="new1"></div>
+                  <p>From the web design to app UX. and UI. It's at here</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-4 p-0">
+                <div class="card" style="background: rgb(0, 179, 39);">
+                  <div class="icon"> <img src="./images/world.png" alt=""></div>
+                  <div class="card-body">
+                    <h4>Clients</h4>
+                    <div class="diss"><span class="dot"></span><hr class="new1"></div>
+                    <p>Permanent Design for product and website</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-lg-4 p-0">
+                <div class="card" style="background: rgb(0, 183, 255);">
+                  <div class="icon"><img src="./images/car.png" alt=""></div>
+                  <div class="card-body">
+                    <h4>Sup</h4>
+                    <div class="diss"><span class="dot"></span><hr class="new1"></div>
+                    <p>Shattering the status quo</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-lg-4 p-0">
+                <div class="card" style="background: rgb(58, 58, 58);">
+                  <div class="icon"><img src="./images/paper.png" alt=""></div>
+                  <div class="card-body">
+                    <h4>Contact</h4>
+                    <div class="diss"><span class="dot"></span><hr class="new1"></div>
+                    <p>From the web design to app UX. and UI. It's at here</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

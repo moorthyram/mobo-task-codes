@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab-UI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="icon" href="https://mobo.co.uk/news/wp-content/uploads/2018/05/cropped-favicon-1-1-32x32.jpg" sizes="32x32"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/icofont.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 m-0 p-0">
+                <div class="tab-btn">
+                <button class="btn active filter-button" data-filter="pro"  id="DefaultOpen">Profile</button>
+                <button class="btn filter-button" data-filter="team">Team Info</button>
+                <button class="btn filter-button" data-filter="set">Settings</button>
+                <button class="btn filter-button" data-filter="sign">Sign Out</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 m-0 p-0">
+                <div class="tab-designs">
+                    <div class="design-one filter_box filter pro active">
+                        <span class="close-icon"><i class="icofont-close"></i></span>
+                        <div class="pro-img">
+                            <img src="./images/DSC_3942 copy.jpg" alt="" width="100px">
+                        </div>
+                        <div class="pro-names">
+                            <h2>MOORTHY P</h2>
+                            <p>Frontend Developer</p>
+                        </div>
+                        <div class="pro-clg">
+                            <p><span>Company :</span> Mobo Media</p>
+                            <p><span>College :</span> K.S.R College of Technology</p>
+                            <p><span>School :</span> Dhanalakshmi Srinivasan Higher Secondary School</p>
+                        </div>
+                        <div class="pro-add">
+                            <div class="icons">
+                                <i class="icofont-ui-call"></i>
+                                <a href="" class="call"><b>Call Us</b> <span>09952509972</span></a>
+                            </div>
+                            <div class="icons">
+                                <i class="icofont-email"></i>
+                                <a href="" class="call"><b>Email Id</b> <span>moorthy@mobo.co.uk</span></a>
+                            </div>
+                            <div class="icons">
+                                <i class="icofont-location-pin"></i>
+                                <a href="" class="call"><b>Address</b> <span>Tirukoilur</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="design-two filter_box filter team">
+                        <span class="close-icon"><i class="icofont-close"></i></span>
+                        <img src="./images/team.jpg" alt="" width="100%">
+                    </div>
+
+                    <div class="design-three filter_box filter set"> 
+                        <span class="close-icon"><i class="icofont-close"></i></span>
+                        <div id="boxes" class="form-group">
+                            <label for="exampleFormControlSelect1">Language</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>English(Canada)</option>
+                                <option>Tamil</option>
+                                <option>Telugu</option>
+                                <option>Hindi</option>
+                                <option>Malayalam</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect2">Display Theme</label>
+                            <select class="form-control" id="exampleFormControlSelect2">
+                                <option>Neutral</option>
+                                <option>Neutral1</option>
+                                <option>Neutral2</option>
+                                <option>Neutral3</option>
+                                <option>Neutral4</option>
+                            </select>
+                        </div>  
+                        <div class="set-note">
+                            <p><span>Project Settings</span> <i class="icofont-rounded-right"></i></p>
+                            <p><span>Email Notification Settings</span> <i class="icofont-rounded-right"></i></p>
+                            <p><span>Push Notification Settings</span> <i class="icofont-rounded-right"></i></p>
+                            <p style="color: rgb(192, 125, 0); border: none;">Clear Search History</p>
+                        </div>    
+                    </div>
+                    
+                    <div class="design-four filter_box filter sign">
+                    <span class="close-icon"><i class="icofont-close"></i></span>
+                        <div class="sign-out">
+                        <!-- <h2>Sign Out</h2> -->
+                        <img src="./images/teddy.jpg" alt="">
+                        <p>Sign Out From the page</p>
+                        <button type="button" class="btn btn-success">Yes</button>
+                        <button type="button" class="btn btn-danger">No</button>                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+		    $(".filter-button").click(function(){
+		        var value = $(this).attr('data-filter');
+               
+		        
+		        if(value == "all")
+		        {
+		            $('.filter').removeClass('hidden');
+		            $('.filter').show('1000');
+		        }
+		        else
+		        {
+		           $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+		           $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+		            $(".filter").not('.'+value).hide('3000');
+		            $('.filter').filter('.'+value).show('3000');
+		        }
+		    });
+		    
+		    if ($(".filter-button").removeClass("active")) {
+				$(this).removeClass("active");
+			}
+			$(this).addClass("active");
+            $(this).css("border", "15px solid block")
+		});
+
+
+        $(document).ready(function() {
+        $(".design-two, .design-three, .design-four").hide();
+        $($(this).show("active")).show();
+        });
+
+
+    </script>
+</body>
+</html>

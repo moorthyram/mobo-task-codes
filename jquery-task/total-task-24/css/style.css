@@ -1,0 +1,488 @@
+body{
+    background: rgb(236, 236, 236);
+}
+.card{
+    background: rgb(236, 236, 236);
+}
+
+.container-fluid{
+    margin: 0px !important;
+    padding: 0px;
+}
+.col-2{
+    background: rgb(255 177 177);
+}
+
+.col-10{
+    padding: 0px;
+}
+
+.card-header{
+    background: rgb(229, 83, 83); 
+    color: #fff; 
+    padding: 20px; 
+    margin: 0px -15px;
+    font-size: 30px;
+}
+
+ .navbar .nav-link span{
+    color: rgb(255, 255, 255);
+}
+.navbar .nav-link a:hover{
+    color: rgb(229, 83, 83);
+}
+/* .navbar .nav-link span:hover{
+    color: red;
+    font-size: 16px;
+    font-weight: 700;
+}  */
+
+.nav-item i{
+    color: rgb(255, 255, 255);
+    padding: 3px 10px 2px 1px;
+ }
+ 
+/* .nav-item i:hover{
+    color: red;
+    font-size: 16px;
+    font-weight: 700;
+ }  */
+
+.navbar {
+    display: block;
+    text-align: left;
+    margin: 0px !important;
+    padding: 0px;
+}
+.navbar-nav {
+    display: block;
+}
+
+.navbar-light .navbar-brand {
+    width: 243px;
+    padding: 19px 0px 19px 30px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    background: rgb(255, 177, 177);
+    width: 243px;
+    padding: 10px 0px 10px 30px;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    background: rgb(255, 131, 131);
+    padding: 10px 0px 10px 30px;
+}
+.navbar .navbar-nav{
+    margin: 0 !important;
+
+}
+.filter_box {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.single-district {
+    margin: 15px;
+    display: block;
+    text-align: center;
+    transition: 0.5s;
+    background: rgb(255, 255, 255);
+}
+.single-district:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    box-shadow: 1px 8px 33px -8px rgba(230, 138, 138, 0.76);
+    -webkit-box-shadow: 1px 8px 33px -8px rgba(230, 138, 138, 0.76);
+    -moz-box-shadow: 1px 8px 33px -8px rgba(230, 138, 138, 0.76);
+}
+
+.single-district h3 {
+    font-weight: 700;
+}
+
+.single-district .head-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.single-district .head-icon img{
+    width: 45px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.single-district .head-icon span{
+    z-index: 1;
+    background: rgb(229, 83, 83);
+    /* background: linear-gradient(426deg, rgb(229, 83, 83) 50%, rgb(255, 243, 243) 100%); */
+    color: rgb(255, 255, 255);
+    padding: 5px 25px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.single-district .title{
+    padding: 10px 30px;
+    text-align: start;
+    background: rgb(255, 255, 255);
+}
+.single-district .title h2 b{
+    color: #000;
+}
+.single-district .title h2{
+    font-size: 17px;
+    color: rgb(229, 83, 83);
+    padding: 0px 6px;
+}
+.single-district .title a{
+    text-align: center;
+    width: 31%;
+    margin-left: 6px;
+    padding: 4px;
+    border-radius: 20px;
+    border: 1px solid rgb(255, 245, 245);
+    color: rgb(255, 255, 255);
+    background: rgb(229, 83, 83);
+    /* background: linear-gradient(426deg, rgb(229, 83, 83) 50%, rgb(255, 243, 243) 100%); */
+    margin-bottom: 10px;
+}
+.single-district .title a:hover{
+    transition: 0.5s;
+    color: aliceblue;
+    box-shadow: 1px 8px 33px -8px rgba(230, 138, 138, 0.76);
+    -webkit-box-shadow: 1px 8px 33px -8px rgba(230, 138, 138, 0.76);
+    -moz-box-shadow: 1px 8px 33px -8px rgba(230, 138, 138, 0.76);
+    background: linear-gradient(426deg, rgb(229, 83, 83) 50%, rgb(255, 187, 187) 100%);
+}
+
+.single-district p {
+    font-size: 12px;
+    margin: 8px;
+}
+
+.single-district a {
+    color: #000;
+    display: block;
+    padding: 15px;
+}
+
+.single-district a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+
+
+.card-tab{
+    padding: 80px;
+}
+table{
+    width: 100%;
+    /* border: 1px solid rgb(187, 187, 187); */
+    background: rgb(255, 255, 255);
+    box-shadow: 1px 8px 33px -8px rgb(184 184 184 / 76%);
+    -webkit-box-shadow: 1px 8px 33px -8px rgb(184 184 184 / 76%);
+    -moz-box-shadow: 1px 8px 33px -8px rgb(184 184 184 / 76%);
+}
+
+table tr{
+    border-bottom: 1px solid rgb(187, 187, 187);
+}
+table tbody tr:hover{
+    transform: scale(1);
+    transition: 0.5s;
+    box-shadow: 1px 8px 33px -8px rgba(230, 138, 138, 0.76);
+    -webkit-box-shadow: 1px 8px 33px -8px rgba(230, 138, 138, 0.76);
+    -moz-box-shadow: 1px 8px 33px -8px rgba(230, 138, 138, 0.76);
+}
+table tr th{
+    padding: 25px;
+}
+table thead tr{
+    color: rgb(229, 83, 83);
+}
+table tr td{
+    padding: 25px;
+}
+
+table tbody tr td a{
+    text-decoration: none !important;
+    color: rgb(255, 255, 255);
+    padding: 7px 15px;
+    border-radius: 20px;
+    border: 1px solid rgb(229, 83, 83);
+    background: rgb(229, 83, 83);
+}
+table tbody tr td a:hover{
+    color: aliceblue;
+    box-shadow: 1px 8px 33px -8px rgba(230, 138, 138, 0.76);
+    -webkit-box-shadow: 1px 8px 33px -8px rgba(230, 138, 138, 0.76);
+    -moz-box-shadow: 1px 8px 33px -8px rgba(230, 138, 138, 0.76);
+}
+
+ .blinks_me {
+    /* animation: blinker 1s linear infinite; */
+    /* background: red; */
+  }
+  .blinks_me:hover {
+    animation: blinker 1s linear infinite;
+    background: rgb(255, 255, 255);
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  } 
+
+  .curser{
+      display: block;
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: #f1f2f3;
+      border-radius: 50%;
+      mix-blend-mode: difference;
+      pointer-events: none;
+  }
+  .curser.active{
+      animation: active_curser 200ms ease forwards running;
+  }
+  @keyframes active_curser{
+      0%{
+          transform: scale(1);
+      }
+      100%{
+          transform: scale(5);
+      }
+  }
+  .curser.unactive{
+    animation: unactive_curser 300ms ease forwards running;
+}
+@keyframes unactive_curser{
+    0%{
+        transform: scale(5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    .navbar-light .navbar-nav .nav-link {
+        background: rgb(255, 219, 219);
+        color: rgb(255, 255, 255);
+        padding: 10px 0px 10px 30px;
+        width: 100%;
+    }
+    .navbar-light .navbar-nav .nav-link:hover {
+        background: rgb(219, 219, 219);
+        color: red;
+        padding: 10px 0px 10px 30px;
+        width: 100%;
+    }
+    .navbar-light .navbar-toggler {
+        /* margin: 0px 37px;
+        padding: 1px 12px 1px 12px; */
+    }
+    .side-bar{
+        display: contents;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+    }
+    .card-header {
+        padding: 15px 20px;
+        width: 100%;
+        font-size: 25px;
+        font-weight: 700;
+        background-attachment: fixed;
+    }
+    .row{
+        margin-right: -20px;
+    }
+    #tabular-column .row{
+        margin-right: -60px;
+    }
+    
+    .single-district {
+        /* margin: 0px -45px 20px 12px; */
+    }
+    .single-district .title a{
+        width: 100px;
+    }
+    .card-tab {
+        padding: 40px 30px;
+    }
+    table {
+        text-align: center;
+        width: 270%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    }
+    table tr th{
+        padding: 10px;
+    }
+    table tr td{
+        padding: 10px;
+        font-size: 13px;
+    }
+    table tbody tr td a {
+        font-size: 10px;
+        padding: 4px 5px;
+    }
+  }
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .side-bar{
+        display: contents;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+    }
+    .navbar-light .navbar-toggler {
+        margin: 0px 105px;
+        padding: 1px 12px 1px 12px;
+    }
+    .navbar-light .navbar-nav .nav-link {
+       width: 100%;
+    }
+    table{
+        overflow-x: auto;
+        width: 145%;
+    }
+    .card-tab{
+        padding: 40px 0px;
+        margin: 15px;
+    }
+    table {
+        text-align: center;
+        width: 175%;
+    }
+    table tr th{
+        padding: 15px;
+    }
+    table tr td{
+        padding: 15px;
+        font-size: 15px;
+    }
+    table tbody tr td a {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .container-fluid{
+        margin: 0px 15px !important;
+        padding: 0px;
+    }
+    .side-bar{
+        display: contents;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+    }
+  
+    .navbar-light .navbar-toggler {
+        margin: 0 0 0 440px;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        width: 105%;
+    }
+    /* .navbar-light .navbar-nav .nav-link:hover {
+        background: rgb(219, 219, 219);
+        color: red;
+    } */
+    
+    .card-header {
+        /* margin: 0px -15px; */
+    }
+    .single-district .title a{
+        width: 100px;
+    }
+    table{
+        overflow-x: auto;
+        width: 145%;
+    }
+    .card-tab{
+        padding: 40px 0px;
+        margin: 15px;
+    }
+    table {
+        text-align: center;
+        width: 150%;
+    }
+    table tr th{
+        padding: 15px;
+    }
+    table tr td{
+        padding: 15px;
+        font-size: 15px;
+    }
+    table tbody tr td a {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+    .side-bar{
+        display: contents;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        margin: 0px !important;
+        padding: 0px;
+        background: rgb(255 177 177);
+    }
+    .navbar-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+
+    .navbar-light .navbar-nav .nav-link {
+        background: rgb(255, 177, 177);
+        width: 308px;
+    }
+    .card-header {
+        padding: 20px 30px;
+    }
+    .single-district .title {
+        padding: 10px 25px;
+    }
+    .single-district .title a {
+        width: 100px;
+    }
+    table{
+        overflow-x: auto;
+        width: 150%;
+        margin: -20px;
+    }
+    table tr th{
+        padding: 18px;
+    }
+    table tr td{
+        padding: 18px;
+        font-size: 15px;
+    }
+    table tbody tr td a {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+}
+
+

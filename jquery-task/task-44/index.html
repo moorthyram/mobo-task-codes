@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Of Div</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000006b;
+}
+.box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    height: 250px;
+    border: 1px solid #fff;
+    background-color: #000000;
+}
+.img1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+    border: 1px solid #fff;
+}
+.img2 {
+	position: absolute;
+	top: 0;
+	right: 0%;
+    border: 1px solid #fff;
+}
+.img3 {
+	position: absolute;
+	bottom: 0%;
+	left: 0;
+    border: 1px solid #fff;
+}
+.img4 {
+	bottom: 0%;
+	right: 0%;
+	position: absolute;
+    border: 1px solid #fff;
+}
+
+
+      </style>
+</head>
+<body>
+
+    <div class=" h-100 d-flex justify-content-center align-items-center">
+        <div>
+            <img class="img1" src="./images/flowers-2.jpg" width="150px" alt="">
+            <img class="img2" src="./images/flowers-2.jpg" width="150px" alt="">
+            <img class="img3" src="./images/flowers-2.jpg" width="150px" alt="">
+            <img class="img4" src="./images/flowers-2.jpg" width="150px" alt="">
+        </div>
+        <div class="box">
+            <img class="img1" src="./images/flowers-2.jpg" width="150px" alt="">
+            <img class="img2" src="./images/flowers-2.jpg" width="150px" alt="">
+            <img class="img3" src="./images/flowers-2.jpg" width="150px" alt="">
+            <img class="img4" src="./images/flowers-2.jpg" width="150px" alt="">
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

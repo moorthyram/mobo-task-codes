@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/icofont.css">
+
+<style>
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: rgb(112, 112, 112);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+/* .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+} */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#main {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    transition: margin-left .5s;
+    padding: 30px;
+    background-color: blueviolet;
+}
+#main span i{
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 6px;
+  margin-right: 50px;
+}
+.item-1{
+  display: flex;
+}
+.item-2{
+  display: flex;
+}
+.sidenav {
+    right: 0;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    /* .sidenav a {font-size: 18px;} */
+}
+.sidenav {
+    right: 0;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <div class="close">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  </div>
+  <div class="item-1">
+    <div class="imgs">
+      <img src="" alt="">
+    </div>
+    <div class="content">
+      <h3>Brand Name - 1</h3>
+      <h4>Modal Name - 1</h4>
+      <h5>200 £</h5>
+    </div>
+  </div>
+  <div class="item-2">
+    <div class="imgs">
+      <img src="" alt="">
+    </div>
+    <div class="content">
+      <h3>Brand Name - 2</h3>
+      <h4>Modal Name - 2</h4>
+      <h5>300 £</h5>
+    </div>
+  </div>
+  <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">ITEM 1</a>
+  <a href="#">ITEM 2</a>
+  <a href="#">ITEM 3</a>
+  <a href="#">ITEM 4</a> -->
+</div>
+<div id="main">
+  <h2>Right Side Navigation Bar</h2>
+  <span onclick="openNav()"><i class="icofont-navigation-menu"></i></span>
+
+</div>
+
+<script type="text/javascript">
+
+function openNav() {
+document.getElementById("mySidenav").style.width = "500px";
+}
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Validation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="icon" href="https://mobo.co.uk/news/wp-content/uploads/2018/05/cropped-favicon-1-1-32x32.jpg" sizes="32x32"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/icofont.css">
+    <style>
+        html, body{
+            height: 100%;
+        }
+        body{
+            background: rgb(255 129 213 / 42%);
+        }
+        .login{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left-side{
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            height: 100%;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+        .left-side h2{
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 3;
+            padding-top: 20px;
+        }
+        .icons{
+            line-height: 5;
+        }
+        .icons i{
+            padding: 6px 8px;
+            border: 1px solid rgb(224, 224, 224);
+            border-radius: 50px;
+            font-size: 30px;
+        }
+        .left-side .fir-p{
+            font-size: 15px;
+            color: rgb(99, 99, 99);
+        }
+        .left-side .sec-p{
+            margin-top: 10px;
+            font-size: 16px;
+            color: rgb(99, 99, 99);
+        }
+        .form-group{
+            margin: 10px 15px;
+            line-height: 1;
+        }
+        .error {
+            color: red;
+            margin-left: 5px;
+        }
+        .form-group p{
+            color: rgb(255, 0, 0);
+            text-align: start;
+            padding: 5px 15px;
+        }
+        .left-side button{
+            padding: 15px 55px;
+            font-size: 16px;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+            border: rgba(255, 51, 0, 0.918);
+            background-color: rgba(255, 51, 0, 0.918);
+            border-radius: 50px;
+            margin-bottom: 50px;
+        }
+        /* .left-side button .icon{
+            opacity: 0;
+            margin-right: 20px;
+        } */
+
+        .left-side button:hover{
+            border: rgba(255, 0, 0, 0.87);
+            background-color: rgba(255, 0, 0, 0.87);
+        }
+        /* .left-side button:hover .icon{
+            opacity: 1;
+        } */
+      
+        .right-side{
+            background-image: linear-gradient(to right, rgba(255, 0, 0, 0.74), rgb(255, 0, 119));
+            height: 100%;
+            text-align: center;
+            padding: 80px;
+            justify-content: center;
+            align-items: center;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .right-side h2{
+            font-size: 40px;
+            font-weight: 800;
+            color: rgb(255, 255, 255);
+            margin-top: 80px;
+        }
+        .right-side p{
+            font-size: 17px;
+            font-weight: 500;
+            color: rgb(199, 199, 199);
+        }
+        #toast #snackbar h4,
+#toast #snackbar p {
+  margin: 0;
+  padding: 0;
+}
+#toast #snackbar h4 {
+  font-size: 16px;
+  padding-bottom: 3px;
+  font-weight: 700;
+  color: rgb(91 92 99);
+}
+#toast #snackbar p {
+  color: rgb(149 151 152);
+}
+#toast #snackbar .toast-icon {
+  border-radius: 100%;
+}
+#toast #snackbar .toast-icon i {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 100%;
+  color: #fff;
+  font-weight: 600;
+}
+#toast #snackbar .toast-body {
+  padding: 10px 25px 10px 10px;
+}
+#toast #snackbar .toast-close-icon {
+  font-size: 30px;
+  margin: 0 10px;
+}
+#toast #snackbar .toast-close-icon i {
+  font-weight: 100;
+  color: rgb(191 193 195);
+}
+
+#snackbar {
+  visibility: hidden;
+  margin: 20px auto;
+  min-width: 290px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+  position: fixed;
+  z-index: 1;
+  top: 21px;
+  left: 50%;
+  font-size: 17px;
+  transform: translateX(-50%);
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 3.5s;
+  animation: fadein 0.5s, fadeout 0.5s 3.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 22px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 22px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    top: 22px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 22px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+        @media (min-width: 320px) and (max-width: 480px) {
+            .container{
+                padding: 10px;
+            }
+            .left-side{
+                border-radius: 10px;
+            }
+            .right-side{
+                display: none;
+            }
+        }
+        @media (min-width: 480px) and (max-width: 768px) {
+        }
+
+
+
+
+        .loader{
+            overflow: hidden;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+        }
+        .loader>div{
+            height: 20px;
+            width: 20px;
+            border: 2px solid #45474b;
+            border-top-color: rgb(78, 134, 255);
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 50%;
+            animation: spin 1.5s infinite linear;
+        }
+        @keyframes spin{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="toast">
+        <div class="" style="position: relative;">
+            <div class="toast-box box-1 d-flex justify-content-between align-items-center" id="snackbar">
+    
+              <div class="toast-body">
+                <h4>Success</h4>
+              </div>
+    
+            </div>
+        </div>
+    </div>
+    <section class="login min-vh-100 d-flex flex-row align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6 col-md-6 col-sm-12 p-md-0 p-lg-0">
+                    <div class="left-side">
+                     <h2>Login Form</h2>
+                     <div class="icons">
+                         <i class="icofont-facebook"></i>
+                         <i class="icofont-twitter"></i>
+                     </div>
+                     <p class="fir-p">or use your accounts</p>
+                     <form id="loginform">
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="email" class="form-control" id="email" placeholder="Email: ramu@gmail.com" autocomplete="" name="">
+                            <p id="p1"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="password" class="form-control" id="pass" placeholder="Password: ramu" autocomplete="off" name="">
+                            <p id="p2"></p>
+                        </div>
+                        <a class="sec-p" href="#">Forgot your password?</a>
+                        <div class="form-group">
+                            <button class="btn" id="btn"> <span class="loader"></span> LOG IN </button>
+                            <!-- <i class="fa fa-spinner fa-spin icon"></i> -->
+                        </div>
+                    </form>
+                     
+                    </div>
+                 </div>
+                 <div class="col-12 col-lg-6 col-md-6 col-sm-12 p-md-0 p-lg-0">
+                     <div class="right-side">
+                         <h2>HTML CSS Login Form</h2>
+                         <p>This login form is created using pure HTML and CSS. For social icons, Fontawesome is used.</p>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+
+$(document).ready(function(){
+
+er_email = false;
+er_pass = false;
+
+
+    $("#email").keyup(function(){
+        set_email()
+    })
+    $("#pass").keyup(function(){
+        set_pass()
+    })
+
+        set_email = () => {
+            var regexe = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; 
+            if(regexe.test($('#email').val()) && $('#email').val()==='ramu@gmail.com'){
+                $("#p1").text('validated!').css({"color": "green"})
+                $("#email").css({"border": "2px solid green"})
+            }else {
+                $("#p1").text('Please enter the valid email').css({"color": "red"})
+                $("#email").css({"border": "2px solid red"})
+                er_email = true;
+            }
+        }
+
+        set_pass = () => {
+            var regexp = /^[a-zA-Z]+$/;
+            if(regexp.test($('#pass').val()) && $('#pass').val()==='ramu'){
+                $("#p2").text('validated!').css({"color": "green"})
+                $("#pass").css({"border": "2px solid green"})
+            }else {
+                $("#p2").text('Please enter the number').css({"color": "red"})
+                $("#pass").css({"border": "2px solid red"})
+                er_pass = true;
+            }
+        }
+
+
+
+    $("#loginform").on('submit',function(e) {
+        e.preventDefault()
+
+        er_pass = false;
+        er_email = false;
+
+        set_pass();
+        set_email();
+
+
+        if(er_email == false && er_pass == false){
+
+			// $('#snackbar').css('border-left', '10px solid rgb(0 209 31)');
+			// $('.toast-body h4').html("Form Submitted");
+
+			// var x = document.getElementById("snackbar");
+			// x.className = "show";
+			// setTimeout(function() {
+			// 	x.className = x.className.replace("show", "");
+			// 	let url = 'https://moorthy.mobo.uk/total-task-24/';
+			// 	window.open(url,"_self");
+			// }, 4000);
+            alert("You're Successfully Login and go to Moorthy's task page");
+
+            setTimeout(function() {
+				let url = 'https://moorthy.mobo.uk/total-task-24/';
+				window.open(url,"_self");
+			}, 3000);
+            
+            return true;
+                $("#btn").on('load',function(){
+                $(".loader").fadeOut(1500);
+                $("#btn").fadeIn(1500);
+            });
+        }else{
+            
+			$('#snackbar').css('border-left', '10px solid rgba(255, 51, 0)');
+			$('.toast-body h4').html("Please fill the Form Correctly");
+
+			var x = document.getElementById("snackbar");
+			x.className = "show";
+			setTimeout(function() {
+				x.className = x.className.replace("show", "");
+			}, 4000);
+            return false;
+        }
+    })
+})
+
+
+
+
+// $(document).ready(function(){
+//     $(".left-side button .icon").css({"opacity": "0","margin-right":"-10px"})
+//     $("#btn").click(function(){
+//         $(".left-side button:hover .icon").css({"opacity": "1","margin-right":"10px"})
+
+//         setTimeout(function() {
+// 				x.className = x.className.replace("show", "");
+// 			}, 3000);
+//     })
+// })
+
+
+
+
+    </script>
+</body>
+</html>

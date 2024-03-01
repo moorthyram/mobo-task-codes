@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Section(26/07/21)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="icon" href="https://mobo.co.uk/news/wp-content/uploads/2018/05/cropped-favicon-1-1-32x32.jpg" sizes="32x32"/>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> 
+
+</head>
+<style>
+    body{
+        background: rgb(255, 255, 255);   
+    }
+    .table{
+      max-width: 600px;
+      display: block;
+      padding: 15px;
+      margin: 100px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: -1px 4px 19px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 4px 19px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 4px 19px -3px rgba(0,0,0,0.75);
+    }
+    #accordion li:nth-child(1){
+      display: flex;
+      justify-content: space-between;
+      margin-left: -40px;
+     border-bottom: 1px solid rgb(255, 208, 0);
+    }
+    #accordion li:nth-child(2){
+      display: flex;
+      justify-content: space-between;
+      margin-left: -40px;
+     border-bottom: 1px solid rgb(255, 208, 0);
+    }
+    #accordion li:nth-child(3){
+      display: flex;
+      justify-content: space-between;
+      margin-left: -40px;
+    }
+    #accordion li p{
+        margin-left: 20px;
+        color: #3f3f3f;
+    }
+    #accordion span{
+        position: absolute;
+        right: 10px;
+        top: 22px;
+        border: 6px solid #fff;
+        border-radius: 15px;
+        background-color: rgb(255, 246, 246);
+    }
+    .u-iaccordion .ui-accordion-content {
+        padding: 0px;
+    }
+    .ui-accordion .ui-accordion-header{
+        margin: 0px;
+        padding: 20px;
+        font-size: 22px;
+    }
+    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+        background: rgb(255, 200, 113);
+        border: 1px solid rgb(255, 200, 113);
+        color: rgb(255, 255, 255);
+        border-radius: 0px;
+    }
+    .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+        background: rgb(239, 165, 46);
+        border: 1px solid rgb(239, 165, 46);
+        color: rgb(255, 255, 255);
+    }
+    .ui-widget-content{
+        background: rgb(255, 233, 197);
+        border: 1px solid rgb(239, 165, 46);
+        color: rgb(255, 255, 255);
+    }
+    .ui-accordion .ui-accordion-content{
+        padding: 0px;
+    }
+    .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{
+        border-bottom-left-radius: 0px;
+    }
+    .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-bl{
+        border-bottom-right-radius: 0px;
+    }
+    .table {
+    max-width: 500px;
+    margin: 150px auto;
+    padding: 0px;
+    }
+</style>
+<body>
+    <div class="table">
+        <div id="accordion">
+            <h3>History</h3>
+            <div>
+                <ul>
+                    <li><p>History-1</p></li>
+                    <li><p>History-2</p></li>
+                    <li><p>History-3</p></li>
+                  </ul>
+            </div>
+            <h3><i class="icofont-paper-plane"></i>Fiction</h3>
+            <div>
+                <ul>
+                    <li><p>Fiction-1</p></li>
+                    <li><p>Fiction-2</p></li>
+                    <li><p>Fiction-3</p></li>
+                  </ul>
+            </div>
+            <h3><i class="icofont-cubes"></i>Fantasy</h3>
+            <div>
+                <ul>
+                    <li><p>Fantasy-1</p></li>
+                    <li><p>Fantasy-2</p></li>
+                    <li><p>Fantasy-3</p></li>
+                  </ul>
+            </div>
+            <h3><i class="icofont-motor-bike"></i>Action</h3>
+            <div>
+                <ul>
+                    <li><p>Action-1</p></li>
+                    <li><p>Action-2</p></li>
+                    <li><p>Action-3</p></li>
+                  </ul>
+            </div>
+          </div>
+    </div>
+   
+      <script>
+  $( function() {
+    var icons = {
+      header: "ui-icon-caret-1-n",
+      activeHeader: "ui-icon-caret-1-s"
+    };
+    $( "#accordion" ).accordion({
+      icons: icons,
+          "animate": true,
+          "collapsible": true,
+          "event": "click"
+    });
+    $( "#toggle" ).button().on( "click", function() {
+      if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+        $( "#accordion" ).accordion( "option", "icons", null );
+      } else {
+        $( "#accordion" ).accordion( "option", "icons", icons );
+      }
+    });
+  });
+</script>
+        
+</body>
+
+
+
+
+</html> 
+

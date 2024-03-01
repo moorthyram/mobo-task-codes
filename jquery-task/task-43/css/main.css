@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ram-primary: rgb(160, 29, 66);
+    --ram-secondary: rgb(255, 0, 74);
+    --ram-white: rgb(255, 255, 255);
+    --ram-banner-title: rgb(100, 11, 37);
+}
+
+
+header {
+    margin-top: 10px;
+    background: rgb(255, 193, 193);
+}
+
+ #header{
+    transition: all 0.5s ease;
+    background-color: var(--ram-white);
+    border-bottom: 1px solid #e6f2fb
+} 
+
+.navbar-light .navbar-brand {
+    font-size: 28px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    color: var(--ram-primary);
+    text-decoration: none;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: var(--ram-secondary);
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover, 
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: var(--ram-secondary);
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ram-primary);
+    padding: 10px 10px 20px 20px;
+    text-decoration: none;
+}
+
+.navbar-light .navbar-nav #nav-item .nav-link{
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+    background-color: var(--ram-secondary);
+    color: var(--ram-white);
+} 
+
+.navbar-light .navbar-nav #nav-item .nav-link:hover{
+    background-color: rgb(223, 0, 0);
+}
+
+.dropdown-toggle::after {
+    margin-top: 8px;
+}
+
+.red-color{
+    color: red;
+}
+.blue-color{
+    color: blueviolet;
+}
+
+.myClass{
+    color: greenyellow;
+    font-size: 50px;
+}
+.green{
+    color: red;
+    font-size: 30px;
+}
+
+li{
+    display: flex;
+    list-style: none;
+}
+
+li p{
+   padding-left: 20px;
+}

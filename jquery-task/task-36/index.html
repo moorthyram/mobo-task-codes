@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip(23/08/21)</title>
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <style>
+        body{
+            text-align: center; 
+            background: #ddd;
+        }
+        h2{
+            margin-top: 200px;
+        }
+        .tools{
+            text-align: center;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(255, 255, 255);
+            border-radius: 20px;
+            max-width: 500px;
+            height: 100px;
+            margin: 50px auto;
+            box-shadow: 5px 10px 5px rgb(204, 204, 204);
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip i{
+            font-size: 40px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 300px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: -52%;
+            margin-left: -60px;
+            }
+            
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+        @media (min-width: 320px) and (max-width: 480px) {
+        .tools{
+            max-width: 300px;
+            height: 80px;
+        }
+        .tooltip i {
+            font-size: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .tooltip .tooltiptext {
+            width: 200px;
+            left: -38%;
+            padding: 10px;
+            font-size: 14px;
+        }
+        .tooltip .cont1 {
+            left: 75%;
+        }
+        .tooltip .cont1::after {
+            left: 20%;
+        }
+        .tooltip .cont5 {
+            left: -160%;
+        }
+        .tooltip .cont5::after {
+            left: 85%;
+        }
+    }
+        @media (min-width: 480px) and (max-width: 768px) {
+        .tools{
+            max-width: 420px;
+            height: 80px;
+        }
+        .tooltip i{
+            font-size: 30px;
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+        .tooltip .tooltiptext {
+            padding: 10px;
+            font-size: 14px;
+            left: -85%;
+        }
+    }
+    </style>
+</head>
+<body>
+<h2>Tooltip Section</h2>
+
+<div class="tools">
+    <div class="tooltip">
+        <i style="color: rgb(12,133,238);" class="fab fa-facebook"></i>
+    
+        <span class="tooltiptext cont1">Connect with friends, family and other people you know. Share photos and videos, send messages and get updates.</span>
+    </div>
+    <div class="tooltip">
+        <i style="color: rgb(0,230,118);" class="fab fa-whatsapp"></i>
+    
+        <span class="tooltiptext cont2">WhatsApp from Facebook is a FREE messaging and video calling app. It's used by over 2B people in more than 180 countries. It's simple, reliable, and private</span>
+    </div>
+    <div class="tooltip">
+        <i style="color: rgb(255, 0, 0)" class="fab fa-instagram"></i>
+    
+        <span class="tooltiptext cont3">Instagrm allows you to create and share your photos, stories, and videos with the friends and followers you care about.</span>
+    </div>
+    <div class="tooltip">
+        <i style="color: rgb(93,169,221);" class="fab fa-twitter"></i>
+    
+        <span class="tooltiptext cont4">Twitter is an American microblogging and social networking service on which users post and interact with messages known as "tweets". Registered users can post, like, and retweet tweets.</span>
+    </div>
+    <div class="tooltip">
+        <i style="color: rgb(183,8,27)" class="fab fa-pinterest"></i>
+    
+        <span class="tooltiptext cont5">Pinterest is an American image sharing to enable saving and discovery of information on the internet using images and, on a smaller scale, animated GIFs and videos, in the form of pinboards.</span>
+    </div>
+</div>
+    
+</body>
+</html>

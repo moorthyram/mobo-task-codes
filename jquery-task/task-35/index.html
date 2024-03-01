@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordian-3(23/08/21)</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="icon" href="https://mobo.co.uk/news/wp-content/uploads/2018/05/cropped-favicon-1-1-32x32.jpg" sizes="32x32"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <style>
+body{
+  background-color: rgb(85, 102, 119);
+  padding: 0 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+.accordion-container{
+  position: relative;
+  max-width: 500px;
+  height: auto;
+  margin: 100px auto;
+}
+.accordion-container > h2{
+  text-align: center;
+  color: #fff;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.set{
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+}
+.set:hover{
+    box-shadow: 0px -3px 18px -10px rgba(85,102,119,0.75) inset;
+-webkit-box-shadow: 0px -3px 18px -10px rgba(85,102,119,0.75) inset;
+-moz-box-shadow: 0px -3px 18px -10px rgba(85,102,119,0.75) inset;
+}
+.set > a{
+  display: block;
+  padding: 15px 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  transition:all 0.2s linear;
+}
+.set > a i{
+  float: right;
+  margin-top: 2px;
+}
+.set > a.active{
+  background-color:#3399cc;
+  color: #fff;
+}
+.content{
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  display:none;
+}
+.content ul{
+  padding: 0px; 
+  margin: 0px;
+}
+.content ul li{
+  list-style: none;
+  color: #333;
+  border-bottom: 1px solid #333;
+}
+.content ul li:last-child{
+  border-bottom: none;
+}
+.content ul li p{
+    padding: 10px 15px; 
+}
+    </style>
+</head>
+<body>
+    <div class="accordion-container">
+        <h2>jQuery Accordion Section-3</h2>
+        <div class="set">
+          <a href="#">History<i class="fa fa-plus"></i></a>
+          <div class="content">
+            <ul>
+                <li><p>History-1</p></li>
+                <li><p>History-2</p></li>
+                <li><p>History-3</p></li>
+              </ul>
+          </div>
+        </div>
+        <div class="set">
+          <a href="#">Fiction <i class="fa fa-plus"></i></a>
+          <div class="content">
+            <ul>
+                <li><p>Fiction-1</p></li>
+                <li><p>Fiction-2</p></li>
+                <li><p>Fiction-3</p></li>
+              </ul>
+          </div>
+        </div>
+        <div class="set">
+          <a href="#">Fantasy<i class="fa fa-plus"></i></a>
+          <div class="content">
+            <ul>
+                <li><p>Fantasy-1</p></li>
+                <li><p>Fantasy-2</p></li>
+                <li><p>Fantasy-3</p></li>
+              </ul>
+          </div>
+        </div>
+        <div class="set">
+          <a href="#">Action <i class="fa fa-plus"></i> </a>
+          <div class="content">
+            <ul>
+                <li><p>Action-1</p></li>
+                <li><p>Action-2</p></li>
+                <li><p>Action-3</p></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script>
+$(document).ready(function() {
+  $(".set > a").on("click", function() {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(this).siblings(".content").slideUp(300);
+      $(".set > a i").removeClass("fa-minus").addClass("fa-plus");
+    } else {
+      $(".set > a i").removeClass("fa-minus").addClass("fa-plus");
+      $(this).find("i").removeClass("fa-plus").addClass("fa-minus");
+      $(".set > a").removeClass("active");
+      $(this).addClass("active");
+      $(".content").slideUp(300);
+      $(this).siblings(".content").slideDown(300);
+    }
+  });
+});
+
+      </script>
+</body>
+</html>

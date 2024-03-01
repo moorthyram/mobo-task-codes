@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/icofont.css">
+
+<style>
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: rgb(225 225 225);
+    overflow-x: hidden;
+    padding-top: 50px !important;
+    transition: 0.5s;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(58, 58, 58);
+    text-decoration: none;
+}
+#main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    transition: margin-left .5s;
+    padding: 30px;
+    background-color: rgb(225 225 225);
+}
+#main span i{
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 6px;
+  margin-right: 50px;
+}
+.sidenav {
+    left: 0;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+.sidenav .closebtn i{
+  padding-right: 8px;
+}
+
+
+.all-menus{
+  background: #fff;
+  padding-top: 20px;
+}
+.main-menu ul{
+  margin-left: -15px;
+}
+.main-menu p{
+  color: gray;
+  padding: 0px;
+}
+.seller-menu p{
+  color: gray;
+  padding: 0px;
+}
+.main-menu li{
+  list-style: none;
+  padding: 10px 0px;
+}
+
+.main-menu li .icofont-arrow-right{
+  opacity: 0;
+  display: flex;
+  justify-content: end;
+  margin: -18px 0px 12px;
+}
+.main-menu li:hover{
+  background-color: rgb(206, 206, 206);
+
+}
+.main-menu li:hover .icofont-arrow-right{
+  opacity: 1;
+  color: rgb(41, 41, 41);
+  text-align: end;
+}
+.main-menu li i{
+  padding-right: 25px;
+  font-size: 16px;
+  color: gray;
+}
+.main-menu li a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  color: gray;
+}
+.seller-menu ul{
+  margin-left: -15px;
+}
+.seller-menu li{
+  list-style: none;
+  padding: 10px 0px;
+}
+
+.seller-menu li .icofont-arrow-right{
+  opacity: 0;
+  display: flex;
+  justify-content: end;
+  margin: -18px 0px 12px;
+
+}
+.seller-menu li:hover{
+  background-color: rgb(206, 206, 206);
+
+}
+.seller-menu li:hover .icofont-arrow-right{
+  opacity: 1;
+  color: rgb(41, 41, 41);
+  text-align: end;
+}
+.seller-menu li i{
+  padding-right: 25px;
+  font-size: 16px;
+  color: gray;
+}
+.seller-menu li a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  color: gray;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <div class="close">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="icofont-rounded-left"></i>Back</a>
+  </div>
+ <div class="all-menus">
+  <div class="main-menu">
+    <ul>
+      <p>MAIN MENU</p>
+      <li><i class="fa fa-home fa-fw"></i><a href="#">Home</a><i class="icofont-arrow-right"></i></li>
+      <li><i class="fa fa-book fa-fw"></i><a href="#">About Us</a><i class="icofont-arrow-right"></i></li>
+      <li><i class="fa fa-headphones"></i></i><a href="#">Contact Us</a><i class="icofont-arrow-right"></i></li>
+      <li><i class="fa fa-suitcase"></i><a href="#">Our Shops</a><i class="icofont-arrow-right"></i></li>
+      <li><i class="fa fa-book fa-fw"></i><a href="#">News & Blogs</a><i class="icofont-arrow-right"></i></li>
+    </ul>
+  </div>
+  <div class="seller-menu">
+    <ul>
+      <p>SELLER MENU</p>
+      <li><i class="fa fa-quote-left"></i><a href="#">Seller Login</a><i class="icofont-arrow-right"></i></li>
+      <li><i class="fa fa-star"></i><a href="#">Seller Signin</a><i class="icofont-arrow-right"></i></li>
+      <li><i class="fa fa-pencil fa-fw"></i><a href="#">Seller Info & FAQ</a><i class="icofont-arrow-right"></i></li>
+      <li><i class="fa fa-headphones"></i><a href="#">Seller Support</a></a><i class="icofont-arrow-right"></i></li>
+    </ul>
+  </div>
+ </div>
+
+</div>
+<div id="main">
+  <h2>Navigation</h2>
+  <span onclick="openNav()"><i class="icofont-navigation-menu"></i></span>
+
+</div>
+
+<script type="text/javascript">
+
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+</html>

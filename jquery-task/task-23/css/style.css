@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: rgb(30, 144, 255);
+    --secondary: rgb(95, 95, 95);
+    --white: rgb(255, 255, 255);
+  }
+.container-fluid{
+    background-color: rgb(255, 255, 255); 
+}
+
+.side-bar{
+    padding: 10px;
+}
+
+.side-bar h1{
+    font-size: 30px;
+    color: var(--primary);
+    padding-bottom: 30px;
+}
+
+.side-bar li{
+    list-style: none;
+    padding-bottom: 25px;
+}
+
+.side-bar li a{
+    text-decoration: none;
+    color: var(--secondary);
+}
+.side-bar li a:hover{
+    color: var(--primary);
+}
+
+.side-bar li a i{
+    font-size: 20px;
+}
+
+.side-bar li a span{
+    font-size: 16px;
+    padding: 10px;
+}
+
+.panel-side{
+    background: rgb(246,250,253);
+}
+
+.panel-side .top-head{
+    background-color: #fff;
+}
+.panel-side .top-head h2{
+    font-size: 22px;
+    height: 70px;
+    padding: 20px 35px;
+}
+.panel-side .inside-color{
+    padding-left: 15px;
+    background: rgb(243, 250, 255);
+}
+.panel-side .act{
+    display: flex;
+    padding: 20px;
+}
+.panel-side .act h4{
+    padding-left: 15px;
+    font-size: 22px;
+}
+.panel-side .act p{
+    padding-left: 12px;
+    color: rgb(185, 185, 185);
+}
+.panel-side .act .dropdown .btn{
+    padding: 0px;
+    font-size: 15px;
+}
+.panel-side .act .dropdown a{
+    color: rgb(56, 56, 56);
+}
+.panel-side .srch{
+    text-align: end;
+    padding-bottom: 20px;
+}
+.panel-side .srch i{
+    position: absolute;
+    padding: 9px;
+    color: var(--secondary);
+}
+.panel-side .srch input{
+    padding: 3px 30px;
+    border: 1px solid #d7d7d7;
+}
+.card{
+    text-align: center;
+    margin-bottom: 25px;
+    transition: 0.5s;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    box-shadow: 1px 8px 33px -8px rgba(110, 168, 255, 0.76);
+    -webkit-box-shadow: 1px 8px 33px -8px rgba(110, 168, 255, 0.76);
+    -moz-box-shadow: 1px 8px 33px -8px rgba(110, 168, 255, 0.76);
+
+    /* box-shadow: 2px 15px 46px -9px rgba(0,75,158,0.87);
+-webkit-box-shadow: 2px 15px 46px -9px rgba(0,75,158,0.87);
+-moz-box-shadow: 2px 15px 46px -9px rgba(0,75,158,0.87); */
+}
+
+.card .images img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.card .logo-img{
+    padding: 6px 0px 15px;
+}
+
+.card .images .tick i{
+    position: absolute;
+    padding: 3px 3px;
+    border: 1px solid #fff;
+    background-color: greenyellow;
+    color: #fff;
+    border-radius: 50%;
+    top: 70px;
+    left: 210px;
+}
+
+.card .logo-img a{
+    text-decoration: none;
+}
+
+.card .logo-img img{
+    width: 45px;
+    padding: 2px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.card .input-box{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card .input-box button{
+    width: 130px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 3px;
+    background: #fff;
+    color: var(--secondary);
+}
+.card .input-box button:hover{
+    border: 2px solid var(--primary);
+    font-weight: 600;
+    color: var(--primary);
+}
+.card .input-box button i{
+    font-size: 25px;
+    padding: 7px;
+}
+.card .input-box button p{
+    font-size: 16px;
+    padding: 7px;
+}
+.navbar-light .navbar-toggler{
+    margin-top: -30px;
+}
+.navbar-light .navbar-toggler:hover {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .side-bar{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+    }
+    .col-2{
+        background: rgb(243, 250, 255);
+    }
+    .top-head{
+        /* display: none; */
+    }
+    .row{
+        margin-left: -30px;
+    }
+    .card{
+        margin-top: 30px;
+        padding: 10px;
+        margin-left: -15px;
+        margin-right: 12px;
+    }
+    .card .images .tick i{
+        top: 75px;
+        left: 185px;
+    }
+    .bu{
+        margin-right: 10px;
+    }
+    .panel-side .act{
+        display: none;
+    }
+    .panel-side .srch{
+        display: none;
+    }
+    .card .input-box button:hover{
+        border: 2px solid var(--primary);
+        font-weight: 600;
+        color: var(--primary);
+    }
+    .navbar {
+        display: flex !important;
+        justify-content: space-between;
+        width: 380px;
+    }
+    .navbar-light .navbar-brand {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+    .side-bar{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+    }
+    .navbar{
+        width: 600px;
+        display: flex !important;
+    }
+    .col-2{
+        background: rgb(243, 250, 255);
+    }
+    .card {
+        margin-left: -80px;
+        margin-right: 40px;
+    }
+    .panel-side .act {
+        margin-left: -92px;
+    }
+    .panel-side .act p {
+        padding-left: 70px;
+    }
+    .panel-side .srch {
+        text-align: center;
+        margin-left: -100px;
+    }
+    .card .images .tick i{
+        top: 70px;
+        left: 272px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 768px) {
+    .side-bar{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+    }
+    .navbar{
+        width: 760px;
+        display: flex !important;
+    }
+    .navbar-light .navbar-brand {
+        padding-bottom: 10px;
+    }
+    .panel-side {
+        margin: 100px 0px 0px -115px;
+    }
+    .panel-side .act {
+        padding: 5px;
+    }
+    .panel-side .act p {
+        padding-left: 140px;
+    }
+    .panel-side .srch {
+        text-align: center;
+    }
+    .card .images .tick i{
+        top: 70px;
+        left: 190px;
+    }
+}
+
+
+
+
+.navbar {
+    display: block;
+}
+.navbar-nav {
+    display: block;
+}
+.navbar-light .navbar-brand {
+    font-size: 30px;
+    color: var(--primary);
+    padding-left: 25px;
+    padding-bottom: 30px;
+    margin-top: -10px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.5);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--primary);
+}
+
+.blink_me:hover {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  } 

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap-Res-Design</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/icofont.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+       <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#"><img src="./images/mobo-logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-lg-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Services</a>
+                </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+       </div>
+    </header>
+    <section id="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="hero-title">
+              <h1>Welcome to <span>Mobo</span></h1>
+              <p>MOBO is one of the leading web design and development company in the UK, specializing in interactive, 
+                engaging and bespoke digital solutions. From web design, SEO, software development and IT outsourcing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 class="form-title" style="text-align: center;">Form Validation</h1>
+           <div id="form-reg">
+             <p id="head"></p>
+             <form id="register">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>First name</label>
+                  <input type="text" class="form-control" id="fname" placeholder="Please Enter Your First Name">
+                  <p id="p1"></p>
+                </div>
+                <div class="col-md-6">
+                  <label>Last name</label>
+                  <input type="text" class="form-control" id="lname" placeholder="Please Enter Your Last Name">
+                  <p id="p2"></p>
+                </div>
+                <div class="col-md-6">
+                  <label>Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="Please Enter Your Email Address">
+                  <p id="p3"></p>
+                </div>
+                <div class="col-md-6">
+                  <label>Phone Number</label>
+                  <input type="email" class="form-control" id="phn" placeholder="Please Enter Your Phone Number">
+                  <p id="p4"></p>
+                </div>
+                <div class="col-12">
+                  <label>Password:</label>
+                  <input type="password" class="form-control" id="pwd" name="password">
+                  <p id="p5"></p>
+              </div>
+              <div class="col-12">
+                  <label>Confirm Password:</label>
+                  <input type="password" class="form-control" id="cpwd" name="password" onChange="checkPasswordMatch();" >
+                  <p id="p6"></p>
+              </div>
+              <div class="re" id="divCheckPasswordMatch">
+              </div>
+              <div class="col-12">
+                <select id="slt" class="form-control">
+                  <option selected>select</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <p id="p7"></p>
+              </div>
+              <div class="col-12" class="form-control">
+                <label>Example textarea</label>
+                <textarea class="form-control" id="subject" rows="3"></textarea>
+                <p id="p8"></p>
+              </div>
+              <div class="col-12">
+                <button type="submit" id="clk" class="btn btn-primary">Sign in</button>
+              </div>
+              </div>
+            </form>
+           </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ 
+
+   <section id="footer">
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class="customer">
+                        <h4>CUSTOMERS</h4>
+                        <ul>
+                            <li><a href="#">Get a Quote</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Blogs & News</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="partners">
+                        <h4>PARTNERS</h4>
+                        <ul>
+                            <li><a href="#">Sign up</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">How it works</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="stuff">
+                        <h4>SERVICES</h4>
+                        <ul>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="getus">
+                        <h4>CONTACTS</h4>
+                        <ul>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
+                        <div class="icon-box">
+                        <i class="icofont-facebook"></i>
+                        <i class="icofont-twitter"></i>
+                        <i class="icofont-instagram"></i>
+                        <i class="icofont-linkedin"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+
+<script>
+
+  $(document).ready(function(){
+   
+   $("#clk").click(function(e){
+    $('#p1').text(''); 
+    $('#p2').text(''); 
+    $('#p3').text(''); 
+    $('#p4').text(''); 
+    $('#p5').text(); 
+    var fname = $('#fname').val();
+    var lname = $('#lname').val();
+    var email = $('#email').val();
+    var phn = $('#phn').val();
+    var pwd = $('#pwd').val();
+    var cpwd = $('#cpwd').val();
+    var slt = $('#slt').val();
+    var subject = $('#subject').val();
+
+    // // // Regex Method
+    var name_regex = /^[a-zA-Z]+$/;
+    var email_regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var number_regex =  /^\d*(?:\.\d{1,2})?$/;
+    if (fname.length == 0) {
+$('#register').text("* All fields are mandatory *"); 
+$("#firstname").focus();
+return false;
+}
+// Validating FirstName Field.
+else if (!fname.match(name_regex) || fname.length == 0) {
+$('#p1').text("* For your name please use alphabets only *"); 
+($("#fname").focus());
+return false;
+}
+// Validating lastname Field.
+else if (!(lname.length >= 3 && lname.length <= 10) || lname.length == 0) {
+$('#p2').text("* Please enter between 3 and 10 characters *"); 
+$("#lname").focus();
+return false;
+}
+// Validating Email Field.
+else if (!email.match(email_regex) || email.length == 0) {
+$('#p3').text("* Please enter a valid email address *"); 
+$("#email").focus();
+return false;
+}
+// Validating Phone number Field.
+else if (!phn.match(number_regex) || phn.length == 0) {
+$('#p4').text("* Please enter the phone number *"); 
+$("#phn").focus();
+return false;
+}
+// Validating password Field.
+// else if  (!(pwd.length >= 8 && pwd.length <= 10) || pwd.length == 0){
+// $('#p5').text('**enter the password');
+// $("#pwd").focus();
+// return false;
+// }
+// Validating Select Field.
+else if (slt == "Please Choose") {
+$('#p7').text("* Please Choose any one option"); 
+$("#slt").focus();
+return false;
+}
+// Validating Address Field.
+else if (!subject.match(name_regex) || subject.length == 0) {
+$('#p8').text("* For Address please use numbers and letters *"); 
+$("#subject").focus();
+return false;
+} else {
+
+
+alert("Form Submitted Successfuly!");
+return true;
+}
+   })
+ 
+  })
+// // // password and confirm password validation in regex keyup
+$('#cpwd').keyup(function(){
+  var pwd = $('#pwd').val();
+  var cpwd = $('#cpwd').val();
+
+  if(cpwd!=pwd) {
+    $('#p6').text('**password are not correct')
+    return false;
+  } else{
+    $('#p6').text('')
+    return true;
+  }
+})
+
+// // // //  input box validation keyup ***
+$("#subject").on("keyup", function(){
+var valid = /^\d{0,4}(\.\d{0,2})?$/.test(this.value),
+    val = this.value;
+
+if(!valid){
+    console.log("Invalid input!");
+    this.value = val.substring(0, val.length - 1);
+}
+});
+
+</script>
+</body>
+</html>

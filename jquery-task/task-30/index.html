@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page(17/08/21)</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="icon" href="https://mobo.co.uk/news/wp-content/uploads/2018/05/cropped-favicon-1-1-32x32.jpg" sizes="32x32"/>
+    <link rel="stylesheet" href="./css/icofont.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="pro-image">
+                    <img id="change-image" src="images/bag-block.jpg" alt="black-image">
+                    <!-- <img src="./images/bag-grey.jpg" alt="">
+                    <img src="./images/bag-red.jpg" alt="">
+                    <img src="./images/bag-blue.jpg" alt=""> -->
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="pro-content">
+                    <div class="pro-title">
+                        <a href="#">STYLISH BAGS</a>
+                        <h1>TYPIFY BAGS</h1>
+                        <p>A perfect pick for daily use, this polester trending backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner.</p>
+                    </div>
+                    <div class="pro-colors">
+                        <div class="radio-colors">
+                            <h4>Bag Colors</h4>
+                           <div class="colors">
+                               <!-- <button id="1" class="black-color"><i class="icofont-tick-mark"></i></button>
+                               <button id="1" class="grey-color"><i class="icofont-tick-mark"></i></button>
+                               <button id="1" class="red-color"><i class="icofont-tick-mark"></i></button>
+                               <button id="1" class="blue-color"><i class="icofont-tick-mark"></i></button> -->
+                               <div class="black-color">
+                                <input id="black">
+                                <label for="black"><span class="black1 active"><i class="icofont-tick-mark"></i></span></label>
+                              </div>
+                              <div class="grey-color">
+                                <input id="grey">
+                                <label for="grey"><span class="grey1"><i class="icofont-tick-mark"></i></span></label>
+                              </div>
+                               <div class="red-color">
+                                <input id="red">
+                                <label for="red"><span class="red1"><i class="icofont-tick-mark"></i></span></label>
+                              </div>
+                              <div class="blue-color">
+                                <input id="blue">
+                                <label for="blue"><span class="blue1"><i class="icofont-tick-mark"></i></span></label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cable-btns">
+                            <h4>Cable Configuration</h4>
+                            <div class="btns">
+                                <button class="btn filter-button" data-filter="team">Straight</button>
+                                <button class="btn filter-button" data-filter="set">Coiled</button>
+                                <button class="btn filter-button" data-filter="sign">Long-Coiled</button>
+                            </div>
+                            <a href="#"><i class="icofont-question"></i> How to configurate your bags</a>
+                        </div>
+                    </div>
+                    <div class="pro-price">
+                        <h2>248$</h2>
+                        <button class="btn filter-button" data-filter="sign">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+    <script>
+    $(document).ready(function($){
+                $(".grey-color i").hide()
+                $(".red-color i").hide()
+                $(".blue-color i").hide()
+
+        $('.black-color').on({
+            'click': function(){
+                $('#change-image').attr('src','images/bag-block.jpg');
+                $(".pro-title h1").css("color", "black")
+                $(".pro-price h2").text("248$").css("color", "black")
+                $(".black-color i").show()
+                $(".grey-color i").hide()
+                $(".red-color i").hide()
+                $(".blue-color i").hide()
+            }
+        });
+        
+
+        $('.grey-color').on({
+            'click': function(){
+                $('#change-image').attr('src','images/bag-grey.jpg');
+                $(".pro-title h1").css("color", "grey")
+                $(".pro-price h2").text("248$").css("color", "grey")
+                $(".black-color i").hide()
+                $(".grey-color i").show()
+                $(".red-color i").hide()
+                $(".blue-color i").hide()
+            }
+        });
+ 
+        $('.red-color').on({
+            'click': function(){
+                $('#change-image').attr('src','images/bag-red.jpg');
+                $(".pro-title h1").css("color", "rgb(175,62,77)")
+                $(".pro-price h2").text("256$").css("color", "rgb(175,62,77)")
+                $(".black-color i").hide()
+                $(".grey-color i").hide()
+                $(".red-color i").show()
+                $(".blue-color i").hide()
+            }
+        });
+ 
+        $('.blue-color').on({
+            'click': function(){
+                $('#change-image').attr('src','images/bag-blue.jpg');
+                $(".pro-title h1").css("color", "rgb(33,37,100)")
+                $(".pro-price h2").text("256$").css("color", "rgb(33,37,100)")
+                $(".black-color i").hide()
+                $(".grey-color i").hide()
+                $(".red-color i").hide()
+                $(".blue-color i").show()
+            }
+        });
+        
+    });
+
+    </script>
+</body>
+</html>
